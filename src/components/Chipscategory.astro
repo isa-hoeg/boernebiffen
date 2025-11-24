@@ -1,0 +1,21 @@
+---
+import Heading from "./Heading.astro";
+
+const { icon = "", iconalt = "", color = "", category = "" } = Astro.props;
+
+const colors = {
+  coral: "bg-coral",  
+  turquoise: "bg-turquoise",
+  dustgreen: "bg-dustgreen",
+  salmon: "bg-salmon",
+  pink: "bg-pink",
+  yellow: "bg-yellow",
+};
+---
+
+<div class="rounded-sm" >
+    <div class={colors[color]}>
+        <Heading htmlheading="h4" size="xsmall" font="display"> {category} </Heading>
+        <img src={icon} alt={iconalt}>
+    </div>
+</div>
