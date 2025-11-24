@@ -20,6 +20,8 @@
   src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
+
+
 @theme {
   /* Her tilføjes theme variable // tokens */
 
@@ -38,7 +40,11 @@
   /*Typografi */
   --font-display: "Chewy", sans-serif;
   --font-serif: "Merriweather Sans", serif;
+
+  
 }
+
+
 
 @layer base {
 }

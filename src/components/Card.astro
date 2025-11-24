@@ -1,0 +1,39 @@
+---
+const { cardimage="", cardimagealt="", cardtitle="", cardcategory1="", cardcategory2="", cardtime="", variant="", iconimg1="", iconimg2="" } = Astro.props;
+import Heading from "./Heading.astro";
+
+const variantClasses = {
+  "animal": "accent-coral",  
+  "musik": "accent-turquoise",
+  "fakta": "accent-dustgreen",
+  "film": "accent-salmon",
+  "serier": "accent-pink",
+  "a_å": "accent-yellow",
+};
+---
+
+<div class="card bg-bg w-96 rounded-xl">
+  <figure>
+    <img class="rounded-t-xl"
+      src={cardimage}
+      alt={cardimagealt} />
+  </figure>
+  
+  <div class="p-4">
+    <div class="flex justify-between items-center">
+    <Heading htmlheading="h3" size="small" font="display">
+      {cardtitle}
+    </Heading>
+    <Heading htmlheading="h4" size="xsmall" font="display">{cardtime} <img src="/ur.svg" alt="Clock icon" class="inline w-6 h-6 ml-1"/></Heading>
+   </div>
+    <div class="flex justify-between">
+        <div class="flex flex-row gap-4">
+            <Heading htmlheading="h4" size="xsmall" variant={variantClasses[variant]} font="display">{cardcategory1}<img src={iconimg1} alt="" class="inline w-6 h-6"></Heading>
+            <Heading htmlheading="h4" size="xsmall" font="display">{cardcategory2}<img src={iconimg2} alt="" class="inline w-6 h-6"></Heading>
+        </div>
+        <button>Gem</button>
+    </div>
+    </div>
+    
+  
+</div>

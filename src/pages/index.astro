@@ -6,10 +6,27 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 ---
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4">
+	<main class="container mx-auto p-4 bg-accent-dustgreen">
 		<Heading htmlheading="h1">Lav noget flot!</Heading>
         <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+		<Card 
+			cardimage="/lillefroe.webp"
+			cardimagealt="Thumbs up image"
+			cardtitle="Den lille frø"
+			cardcategory1="Musik"
+			cardcategory2="Fakta"
+			cardtime="20 min"
+			variant="musik"
+			vairant=""
+			iconimg1="/musik.svg"
+			iconimg2="/fakta.svg"
+		></Card>
+
+<section class="bg-accent-dustgreen w-">
+
+</section>
 	</main>
 </MainLayout>
