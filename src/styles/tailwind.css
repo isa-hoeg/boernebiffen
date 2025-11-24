@@ -51,6 +51,10 @@
 
 /* Small helper utilities so we can use classes like `font-display` in components */
 @layer utilities {
-  .font-display { font-family: var(--font-display); }
-  .font-serif { font-family: var(--font-serif); }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
 }
