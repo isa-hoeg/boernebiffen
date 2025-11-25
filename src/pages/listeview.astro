@@ -1,0 +1,283 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+---
+<MainLayout title="Listeview">
+<!-- start på hero -->
+ <section class="grid grid-cols-12 grid-rows-1">
+  <!-- talebobbel -->
+  <img src="/tale_bobbel.svg" class="col-start-1 col-end-8 row-start-1 mt-10 md:col-start-3 md:col-end-8 md:mt-10 z-0"/>
+
+  <!-- figur -->
+  <img src="/hero_listogsingle.svg" class="col-start-7 col-end-12 row-start-1 mt-10 md:col-start-7 md:col-end-10 md:mt-20 z-0"/>
+
+  <!-- TEKST, som skal ovenpå boblen -->
+  <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary col-start-2 col-end-7 mr-3 md:col-start-4 row-start-1 mt-24 md:mt-45 z-20">Hej Fiona! Hyggeligt<br>du er tilbage!</Heading>
+</section>
+<!-- slut på hero -->
+
+<!-- start på "fortsæt med" -->
+<section class="mx-auto max-w-7xl px-4 md:px-0">
+  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
+    Fortsæt med at se
+  </Heading>
+  <!-- Scroll-container -->
+  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-yellow rounded-xl p-10">
+    <!-- Wrapper til kortene, så de har fast bredde -->
+    <div class="flex gap-6 w-max">
+      <Card 
+        cardimage="/vanten.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Vanten"
+        cardcategory1="Musik"
+        cardcategory2="film"
+        cardtime="8 min"
+        variant="musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/ritaogkrokodille.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Rita og Krokodille"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="5 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/lillefinger_denskaevekasse.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Lillefinger - Den.."
+        cardcategory1="Fakta"
+        cardcategory2="Film"
+        cardtime="20 min"
+        variant="Fakta"
+        iconimg1="/fakta.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/slubre.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Slubre"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="4 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/soemanden.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Sømanden"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/dennyesommerfulg.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Den nye..."
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+    </div>
+  </div>
+</section>
+<!-- slut på fortsæt med -->
+
+
+<!-- start på "fordi du så vitello" -->
+ <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
+  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
+   Fordi du så Vitello
+  </Heading>
+  <!-- Scroll-container -->
+  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10">
+    <!-- Wrapper til kortene, så de har fast bredde -->
+    <div class="flex gap-6 w-max">
+      <Card 
+        cardimage="/vanten.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Vanten"
+        cardcategory1="Musik"
+        cardcategory2="film"
+        cardtime="8 min"
+        variant="musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/ritaogkrokodille.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Rita og Krokodille"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="5 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/lillefinger_denskaevekasse.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Lillefinger - Den.."
+        cardcategory1="Fakta"
+        cardcategory2="Film"
+        cardtime="20 min"
+        variant="Fakta"
+        iconimg1="/fakta.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/slubre.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Slubre"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="4 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/soemanden.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Sømanden"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/dennyesommerfulg.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Den nye..."
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+    </div>
+  </div>
+</section>
+<!-- slut på "fordi du så vitello" -->
+
+<!-- start på "andre ser også" -->
+ <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
+  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
+Andre ser også
+  </Heading>
+  <!-- Scroll-container -->
+  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10">
+    <!-- Wrapper til kortene, så de har fast bredde -->
+    <div class="flex gap-6 w-max">
+      <Card 
+        cardimage="/vanten.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Vanten"
+        cardcategory1="Musik"
+        cardcategory2="film"
+        cardtime="8 min"
+        variant="musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/ritaogkrokodille.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Rita og Krokodille"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="5 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/lillefinger_denskaevekasse.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Lillefinger - Den.."
+        cardcategory1="Fakta"
+        cardcategory2="Film"
+        cardtime="20 min"
+        variant="Fakta"
+        iconimg1="/fakta.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/slubre.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Slubre"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="4 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/soemanden.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Sømanden"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/dennyesommerfulg.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Den nye..."
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+    </div>
+  </div>
+</section>
+<!-- slut på "andre ser også" -->
+</MainLayout>
