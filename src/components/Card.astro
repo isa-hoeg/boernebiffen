@@ -2,6 +2,8 @@
 const { cardimage="", cardimagealt="", cardtitle="", cardcategory1="", cardcategory2="", cardtime="", variant="", iconimg1="", iconimg2="" } = Astro.props;
 import Heading from "./Heading.astro";
 
+import Button from "./Button.astro";
+
 const variantClasses = {
   "animal": "accent-coral",  
   "musik": "accent-turquoise",
@@ -31,7 +33,7 @@ const variantClasses = {
             <Heading htmlheading="h4" size="xsmall" variant={variantClasses[variant]} font="display">{cardcategory1}<img src={iconimg1} alt="" class="inline w-6 h-6"></Heading>
             <Heading htmlheading="h4" size="xsmall" font="display">{cardcategory2}<img src={iconimg2} alt="" class="inline w-6 h-6"></Heading>
         </div>
-        <button>Gem</button>
+        <Button variant="like" size="small" icon="/emptyheart.svg" iconHover="/filledheart.svg">Gem</Button>
     </div>
     </div>
     
