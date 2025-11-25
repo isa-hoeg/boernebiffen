@@ -9,23 +9,108 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 ---
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4 bg-accent-dustgreen">
-		<Heading htmlheading="h1">Lav noget flot!</Heading>
-        <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
-		<Card 
-			cardimage="/lillefroe.webp"
-			cardimagealt="Thumbs up image"
-			cardtitle="Den lille frø"
-			cardcategory1="Musik"
-			cardcategory2="Fakta"
-			cardtime="20 min"
-			variant="musik"
-			vairant=""
-			iconimg1="/musik.svg"
-			iconimg2="/fakta.svg"
-		></Card>
+	<main class="">
+		<!-- Header forside -->
+		<section class="bg-[url(header_mobil.svg)] bg-contain bg-no-repeat h-auto min-h-64 w-full lg:bg-[url(/header-forside.svg)] lg:bg-cover lg:bg-center lg:h-110 lg:w-full">
+			<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 py-4 lg:scale-100"></a>
 
-<section class="bg-accent-dustgreen w-">
+			<div class="hidden md:flex flex-col items-center -m-6">
+				<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
+				<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
+				<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
+			</div>
+		</section>
+		
+		<!-- Hero section -->
+		 <section class="bg-[url(hero_mobil.svg)] lg:bg-[url(/hero_bg.svg)] bg-cover bg-center h-200 w-full -mt-40">
+			<div class="flex flex-col items-center mt-20 lg:hidden">
+				<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
+				<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
+				<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
+				<Text size="brødtekst" stylingclasses="text-center w-70 pt-6">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
+			</div>
+			<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh]">
+				<img src="/hero_forside1.svg" alt="figur1" class="col-start-1 col-end-5 row-start-4 z-10 mt-6">
+				<img src="/hero_forside2.svg" alt="figur2" class="col-start-5 col-end-7 row-start-6">
+				<img src="/hero_forside3.svg" alt="figur3" class="col-start-4 col-end-10 row-start-1 mt-8 ml-4 z-10">
+				<img src="/hero_forside4.svg" alt="figur4" class="col-start-8 col-end-12 row-start-4">
+				<img src="/heroforside_5.svg" alt="figur5" class="col-start-2 col-end-5 row-start-3">
+			</div>
+		 </section>
+
+		 <!-- Cards section -->
+		  <section class="bg-[url(/wavy_mobil.svg)] lg:bg-[url(/wavy_section.svg)] bg-cover bg-center h-215 w-full py-20 flex z-10">
+			<div class="overflow-auto">
+			<div class="flex flex-row gap-10 w-max px-6">
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+			</div>
+			</div>
+		</section>
+
+<section class="container mx-auto p-4">
 
 </section>
 	</main>
