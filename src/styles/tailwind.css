@@ -20,8 +20,6 @@
   src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
-
-
 @theme {
   /* Her tilføjes theme variable // tokens */
 
@@ -36,15 +34,12 @@
   --color-accent-dustgreen: #d9eada;
   --color-accent-coral: #ec5e55;
   --color-accent-blue: #c9eefc;
+  --color-accent-purple: #ac54d9;
 
   /*Typografi */
   --font-display: "Chewy", sans-serif;
   --font-serif: "Merriweather Sans", serif;
-
-  
 }
-
-
 
 @layer base {
 }
