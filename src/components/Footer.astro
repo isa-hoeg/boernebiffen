@@ -1,7 +1,22 @@
 ---
+import Heading from '../components/Heading.astro';
+import Text from '../components/Text.astro';
+import "../styles/tailwind.css";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
+<footer class="bg-[url(/footer_mobil.svg)] bg-cover md:bg-[url(/footer_desktop.svg)] grid grid-cols-1 md:grid-cols-3 pt-20 px-20 mt-10">
+    <div class="flex flex-col items-center md:items-start my-15 gap-5">
+    <img src="/logo.svg" alt="logo">
+    <img src="/filmstriben_logo.svg" alt="Filmstriben logo">
     </div>
+  <div class="flex flex-col items-center md:items-center md:my-15 gap-2">
+    <Text stylingclasses="brødtekst underline">Om Børnebiffen</Text>
+    <Text stylingclasses="brødtekst underline">Tilgængelighedserklæring</Text>
+    <Text stylingclasses="brødtekst underline">Cookies</Text>
+    <Text stylingclasses="brødtekst underline">Privatlivspolitik</Text>
+    <Text stylingclasses="brødtekst underline">Kontakt os</Text>
+  </div>
+  <div class="flex flex-col items-center md:items-end my-15">
+    <Text stylingclasses="brødtekst">DBC DIGITAL A/S<br>Tempovej 7-11<br>2750 Ballerup</Text>
+  </div>
 </footer>
+
