@@ -12,13 +12,13 @@ import Card from "../components/Card.astro";
 <!-- start på hero -->
  <section class="grid grid-cols-12 grid-rows-1">
   <!-- talebobbel -->
-  <img src="/tale_bobbel.svg" class="col-start-1 col-end-8 row-start-1 mt-10 md:col-start-3 md:col-end-8 md:mt-10 z-0"/>
+  <img src="/tale_bobbel.svg" class="col-start-1 col-span-8 row-start-1 mt-10 md:col-start-3 md:col-span-5 md:mt-10 z-0"/>
 
   <!-- figur -->
-  <img src="/hero_listogsingle.svg" class="col-start-7 col-end-12 row-start-1 mt-10 md:col-start-7 md:col-end-10 md:mt-20 z-0"/>
+  <img src="/hero_listogsingle.svg" class="col-start-8 col-span-5 row-start-1 mt-10 md:col-start-7 md:col-span-3 md:mt-20 z-0"/>
 
   <!-- TEKST, som skal ovenpå boblen -->
-  <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary col-start-2 col-end-7 mr-3 md:col-start-4 row-start-1 mt-24 md:mt-45 z-20">Hej Fiona! Hyggeligt<br>du er tilbage!</Heading>
+  <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary col-start-2 col-span-5 ml-5 md:ml-0 mr-0 md:mr-4 md:col-start-4 row-start-1 mt-26 md:mt-45 z-20">Hej Fiona! Hyggeligt<br>du er tilbage!</Heading>
 </section>
 <!-- slut på hero -->
 
@@ -194,13 +194,76 @@ import Card from "../components/Card.astro";
 </section>
 <!-- slut på "fordi du så vitello" -->
 
+<!-- start på kategorier -->
+ <section class="bg-[url(/wavy_section_kategori.svg)] bg-cover bg-center min-h-[600px] p-5 mt-20 flex flex-col justify-center">
+  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary container mx-auto">
+    Kategorier
+  </Heading>
+
+    <div class="flex flex-row gap-4 md:gap-10 justify-start md:justify-center overflow-x-auto px-4 py-10">
+        <div class="flex flex-col gap-2">
+            <div class="bg-accent-coral rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+               <img src="/dyr.svg" alt="dyr" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+            Dyr
+             </Heading>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="bg-accent-turquoise rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+               <img src="/musik.svg" alt="Musik" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+           Musik
+             </Heading>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="bg-accent-dustgreen rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+               <img src="/fakta.svg" alt="fakta" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+            Fakta
+             </Heading>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="bg-accent-salmon rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+               <img src="/popcorn.svg" alt="film" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+            Film
+             </Heading>
+        </div>
+             <div class="flex flex-col gap-2">
+            <div class="bg-accent-pink rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+               <img src="/film.svg" alt="serier" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+         Serier
+             </Heading>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="bg-accent-yellow rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center">
+           <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center py-10 w-30 h-30">
+            A-Å
+             </Heading>
+            </div>
+             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+            A-Å
+             </Heading>
+        </div>
+    </div>
+
+ </section>
+
+<!-- slut på kategorier -->
+
 <!-- start på bokse med karakterer -->
- <section class="container mt-20 mx-auto">
+ <section class="container mt-10 mx-auto">
       <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 px-4 md:px-0">
          Karakterer
             </Heading>
             <div class="grid grid-cols-12 grid-rows-2 gap-6 px-4 md:px-0">
-            <div class="bg-accent-pink col-start-1 col-span-6 md:col-span-4 rounded-xl flex flex-col gap-2 row-start-2 row-span-2 md:row-start-1 md:row-span-2 py-20">
+            <div class="bg-accent-salmon col-start-1 col-span-6 md:col-span-4 rounded-xl flex flex-col gap-2 row-start-2 row-span-2 md:row-start-1 md:row-span-2 py-20">
                     <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
             Vitello
              </Heading>
@@ -232,7 +295,7 @@ import Card from "../components/Card.astro";
 <!-- slut på bokse med karakterer -->
 
 <!-- start på "andre ser også" -->
- <section class="container mx-auto mt-20 px-4 md:px-0">
+ <section class="container mx-auto my-20 px-4 md:px-0">
   <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
 Andre ser også
   </Heading>
