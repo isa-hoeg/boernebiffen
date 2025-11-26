@@ -8,7 +8,7 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 ---
-<MainLayout title="Listeview">
+<MainLayout title="Titel">
 <!-- start på hero -->
  <section class="grid grid-cols-12 grid-rows-1">
   <!-- talebobbel -->
@@ -23,12 +23,12 @@ import Card from "../components/Card.astro";
 <!-- slut på hero -->
 
 <!-- start på "fortsæt med" -->
-<section class="mx-auto max-w-7xl px-4 md:px-0">
+<section class="container mx-auto px-4 md:px-0">
   <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
     Fortsæt med at se
   </Heading>
   <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-yellow rounded-xl p-10">
+  <div class="flex gap-10 overflow-x-auto bg-accent-yellow rounded-xl p-6 md:p-10">
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
       <Card 
@@ -108,14 +108,13 @@ import Card from "../components/Card.astro";
 </section>
 <!-- slut på fortsæt med -->
 
-
 <!-- start på "fordi du så vitello" -->
- <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
+ <section class="container mx-auto mt-20 px-4 md:px-0">
   <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
    Fordi du så Vitello
   </Heading>
   <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10">
+  <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10">
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
       <Card 
@@ -195,13 +194,50 @@ import Card from "../components/Card.astro";
 </section>
 <!-- slut på "fordi du så vitello" -->
 
+<!-- start på bokse med karakterer -->
+ <section class="container mt-20 mx-auto">
+      <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 px-4 md:px-0">
+         Karakterer
+            </Heading>
+            <div class="grid grid-cols-12 grid-rows-2 gap-6 px-4 md:px-0">
+            <div class="bg-accent-pink col-start-1 col-span-6 md:col-span-4 rounded-xl flex flex-col gap-2 row-start-2 row-span-2 md:row-start-1 md:row-span-2 py-20">
+                    <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+            Vitello
+             </Heading>
+            <img src="/vitello1.webp" alt="vitello" class="w-full h-auto object-contain"/>
+            <img src="/vitello2.webp" alt="vitello" class="w-full h-auto object-contain"/>            
+            </div>
+            
+            <div class="bg-accent-dustgreen col-start-1 col-span-12 md:col-start-5 md:col-span-8 rounded-xl row-start-1 row-span-1 pt-7">
+            <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+            Lillefinger
+             </Heading>
+            <img src="/lillefinger.webp" alt="lillefinger" class="w-full h-100 object-contain"/>
+            </div>
+            <div class="bg-accent-coral col-start-7 col-span-6 md:col-start-5 md:col-span-4 rounded-xl row-start-2 row-span-1 pt-5">
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+            Cirkeline
+             </Heading>
+                <img src="/cirkeline.webp" alt="cirkeline" class="w-full h-80 object-contain"/>
+            </div>
+            <div class="bg-accent-yellow col-start-7 col-span-6 md:col-start-9 md:col-span-4 rounded-xl row-start-3 md:row-start-2 md:row-span-1 pt-5">
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+            Pipungerne
+             </Heading>
+                <img src="/pipungerne.webp" alt="pipungerne" class="w-full h-80 object-contain"/>
+            </div>
+     </div>
+
+</section>
+<!-- slut på bokse med karakterer -->
+
 <!-- start på "andre ser også" -->
- <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
+ <section class="container mx-auto mt-20 px-4 md:px-0">
   <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4">
 Andre ser også
   </Heading>
   <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10">
+  <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10">
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
       <Card 
