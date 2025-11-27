@@ -16,53 +16,44 @@ import Card from "../components/Card.astro";
 			<div class="relative ">
 				<img src="figur_header_forside.svg" alt="figur header" class="absolute top-18 right-20 scale-80 lg:top-32 lg:left-35 lg:scale-100 -z-1 intersect:animate-fade-down">
 			</div>
-<header
-  x-data="{ showmenu: false }">
-<div class="hidden lg:flex flex-row justify-between px-5">
-	<div>
-		<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 p-4 lg:scale-100 lg:pt-6"></a>
-	</div>	
-	<div class="flex flex-row gap-6 mx-6 my-6">
-		<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
-      	<Text><Link href="/listeview" variant="primary" size="large">Log ind</Link></Text>
-	</div>
-</div>
+			<header x-data="{ showmenu: false }"> 
+				<div class="hidden lg:flex flex-row justify-between px-5">
+					<div>
+						<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 p-4 lg:scale-100 lg:pt-6"></a>
+					</div>	
+					<div class="flex flex-row gap-6 mx-6 my-6">
+						<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
+      					<Text><Link href="/listeview" variant="primary" size="large">Log ind</Link></Text>
+					</div>
+				</div>
+		
+			<header x-data="{ showmenu: false }" class="relative">
+  				<!-- Burger menu til mobil -->
+  				<div class="lg:hidden flex items-center justify-between p-4">
+    				<a href="/"><img src="/logo.svg" alt="Logo" class="h-12"></a>
+    				<button class="cursor-pointer text-secondary" x-on:click="showmenu = !showmenu">
+      					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      					</svg>
+    				</button>
+  				</div>
 
-<header x-data="{ showmenu: false }" class="relative">
-  <!-- Burger menu til mobil -->
-  <div class="lg:hidden flex items-center justify-between p-4">
-    <a href="/">
-      <img src="/logo.svg" alt="Logo" class="h-12">
-    </a>
-
-    <button class="cursor-pointer text-secondary" x-on:click="showmenu = !showmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-           stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" 
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobil menu dropdown -->
-  <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" 
-       class="lg:hidden bg-bg w-full absolute top-full left-0 shadow-md backdrop-blur-sm z-10">
-    <ul class="flex flex-col gap-4 p-4">
-      	<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
-		<Text><Link href="/listeview" variant="primary" size="large">Log ind</Link></Text>
-    </ul>
-  </nav>
-</header>
-
+  				<!-- Mobil menu dropdown -->
+  				<nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" class="lg:hidden bg-bg w-full absolute top-full left-0 shadow-md backdrop-blur-sm z-10">
+    				<ul class="flex flex-col gap-4 p-4">
+      					<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
+						<Text><Link href="/listeview" variant="primary" size="large">Log ind</Link></Text>
+    				</ul>
+  				</nav>
+			</header>
+			<!-- Overskrift på desktop -->
 			<div class="hidden md:flex flex-col items-center ">
 				<div>
 					<Heading htmlheading="h2" font="display" size="medium" class="">BørneBiffen</Heading>
 				</div>
-
 				<div class="-mt-10">
 					<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
 				</div>
-
 				<div class="-mt-10">
 				<Heading htmlheading="h2" font="display" size="medium">i børnehøjde</Heading>
 				</div>
@@ -72,193 +63,141 @@ import Card from "../components/Card.astro";
 		<!-- Hero section -->
 		 <section class="bg-[url(hero_mobil.svg)] lg:bg-[url(/hero_bg.svg)] bg-cover bg-center h-185 w-full -mt-30">
 			<div class="flex flex-col items-center mt-20 ">
+				<!-- Overskrift på mobil -->
 				<div class="lg:hidden text-center">
 					<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
 					<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
 					<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
 				</div>
 
-			<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh] lg:max-h-[120vh]">
-				<div class="text-center col-start-3 col-end-12 row-start-1 mt-6 lg:mt-20 lg:col-start-5 lg:col-end-9">
-					<Text size="brødtekst">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
+				<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh] lg:max-h-[120vh]">
+					<div class="text-center col-start-3 col-end-12 row-start-1 mt-6 lg:mt-20 lg:col-start-5 lg:col-end-9">
+						<Text size="brødtekst">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
+					</div>
+					<div class="col-start-3 row-start-2 mt-7 z-20 lg:row-start-2 lg:col-start-5  lg:ml-15 lg:mt-30 inline-block intersect:animate-fade-right">
+						<Text><Button variant="primary" size="medium">Download app</Button></Text>
+					</div>
+					<div class="col-start-8 col-end-12 row-start-2 mt-7 lg:row-start-2 lg:col-start-7 lg:col-end-11 lg:mt-30 lg:ml-8 z-45 intersect:animate-fade-left">
+						<Text stylingclasses="inline-block"><Button variant="primary" size="medium">Log ind</Button></Text>
+					</div>
+					<!-- Figurer placeret med grid -->
+					<img src="/snor.svg" alt="snor" class="col-start-4 col-end-5 row-start-2 z-30 mt-7 scale-80 ml-3 lg:scale-100 lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:mt-28 lg:ml-5 ">
+					<img src="/hero_forside1.svg" alt="figur1" class="col-start-1 col-end-5 row-start-5 z-10 lg:row-start-3 lg:mt-20 intersect:animate-fade-right">
+					<img src="/hero_forside2.svg" alt="figur2" class="col-start-5 col-end-7 row-start-6 mt-8 lg:row-start-3 lg:col-start-3 lg:col-end-6 lg:ml-6 lg:mt-20 intersect:animate-fade-right">
+					<img src="/hero_forside3.svg" alt="figur3" class="col-start-4 col-end-10 row-start-2 mt-8 z-10 lg:col-start-6 lg:col-end-10 lg:row-start-2 lg:mt-28 intersect:animate-fade-left">
+					<img src="/hero_forside4.svg" alt="figur4" class="col-start-8 col-end-12 row-start-5 lg:col-start-10 lg:col-end-12 lg:row-start-3 intersect:animate-fade-left ">
+					<img src="/heroforside_5.svg" alt="figur5" class="col-start-2 col-end-5 row-start-4 lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:ml-8 intersect:animate-fade-right">
 				</div>
-
-				<div class="col-start-3 row-start-2 mt-7 z-20 lg:row-start-2 lg:col-start-5  lg:ml-15 lg:mt-30 inline-block intersect:animate-fade-right">
-					<Text><Button variant="primary" size="medium">Download app</Button></Text>
-				</div>
-
-				<div class="col-start-8 col-end-12 row-start-2 mt-7 lg:row-start-2 lg:col-start-7 lg:col-end-11 lg:mt-30 lg:ml-8 z-45 intersect:animate-fade-left">
-					<Text stylingclasses="inline-block"><Button variant="primary" size="medium">Log ind</Button></Text>
-				</div>
-			
-				<img src="/snor.svg" alt="snor" class="col-start-4 col-end-5 row-start-2 z-30 mt-7 scale-80 ml-3 lg:scale-100 lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:mt-28 lg:ml-5 ">
-				<img src="/hero_forside1.svg" alt="figur1" class="col-start-1 col-end-5 row-start-5 z-10 lg:row-start-3 lg:mt-20 intersect:animate-fade-right">
-				<img src="/hero_forside2.svg" alt="figur2" class="col-start-5 col-end-7 row-start-6 mt-8 lg:row-start-3 lg:col-start-3 lg:col-end-6 lg:ml-6 lg:mt-20 intersect:animate-fade-right">
-				<img src="/hero_forside3.svg" alt="figur3" class="col-start-4 col-end-10 row-start-2 mt-8 z-10 lg:col-start-6 lg:col-end-10 lg:row-start-2 lg:mt-28 intersect:animate-fade-left">
-				<img src="/hero_forside4.svg" alt="figur4" class="col-start-8 col-end-12 row-start-5 lg:col-start-10 lg:col-end-12 lg:row-start-3 intersect:animate-fade-left ">
-				<img src="/heroforside_5.svg" alt="figur5" class="col-start-2 col-end-5 row-start-4 lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:ml-8 intersect:animate-fade-right">
-			</div>
 			</div>
 		 </section>
 
-		 <!-- Cards section -->
-		  <section class="bg-[url(/wavy_mobil.svg)] -mt-40 lg:bg-[url(/wavy_section.svg)] bg-cover bg-center h-215 w-full py-20 z-10 flex flex-col relative">
-  <div class="absolute left-8 top-55 lg:left-8 lg:top-45">
-    <Heading htmlheading="h2" font="display" size="medium">Hvad hitter lige nu:</Heading>
-  </div>
+		 <!-- Hvad hitter lige nu - Cards section -->
+		<section class="bg-[url(/wavy_mobil.svg)] -mt-40 lg:bg-[url(/wavy_section.svg)] bg-cover bg-center h-215 w-full py-20 z-10 flex flex-col relative">
+  			<div class="absolute left-8 top-55 lg:left-8 lg:top-45">
+   		 		<Heading htmlheading="h2" font="display" size="medium">Hvad hitter lige nu:</Heading>
+  			</div>
 
-  <div class="overflow-hidden w-full mt-50">
-    <div class="flex flex-row gap-6 w-max p-6 animate-scrollX">
-
-      <!-- CARDS – SÆT 1 -->
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-
-      <!-- CARDS – SÆT 2 (DUPLICERET FOR LOOP) -->
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-      <Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Rita og krokodillen" cardtime="20" badgemusik="true" badgefakta="true"></Card>
-
-    </div>
-  </div>
-
-  <div class="relative">
-    <img src="/hanging_figur.svg" alt="" class="absolute scale-70 top-8 lg:left-10 lg:-top-5 lg:scale-100 intersect:animate-fade-down">
-  </div>
-</section>
+  			<div class="overflow-hidden w-full mt-50">
+   			 	<div class="flex flex-row gap-6 w-max p-6 animate-scrollX">
+      				<!-- Card Sæt 1 -->
+	  				<Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Lille frø" cardtime="20" badgedyr="true" badgefilm="true"></Card>
+      				<Card cardimage="/ballerina.webp" cardimagealt="Thumbs up image" cardtitle="Ballerina" cardtime="22" badgemusik="true" badgefilm="true"></Card>
+      				<Card cardimage="/desmaavilde.webp" cardimagealt="Thumbs up image" cardtitle="De små vilde: Efterår" cardtime="8" badgedyr="true" badgefakta="true"></Card>
+      				<Card cardimage="/harrenogskildpadden.webp" cardimagealt="Thumbs up image" cardtitle="Harren og Skilpadden" cardtime="12" badgedyr="true" badgeserier="true"></Card>
+      				<Card cardimage="/lillefinger_hindbaerret.webp" cardimagealt="Thumbs up image" cardtitle="Lillefinger - Hindbærret" cardtime="10" badgeserier="true" badgemusik="true"></Card>
+      				<Card cardimage="/edderskoenne_edderkopper.webp" cardimagealt="Thumbs up image" cardtitle="Edderskønne edderkopper" cardtime="8" badgemusik="true" badgefakta="true"></Card>
+      
+      				<!-- Card sæt 2 (Duplikeret for loop) -->
+      				<Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Lille frø" cardtime="20" badgedyr="true" badgefilm="true"></Card>
+      				<Card cardimage="/ballerina.webp" cardimagealt="Thumbs up image" cardtitle="Ballerina" cardtime="22" badgemusik="true" badgefilm="true"></Card>
+      				<Card cardimage="/desmaavilde.webp" cardimagealt="Thumbs up image" cardtitle="De små vilde: Efterår" cardtime="8" badgedyr="true" badgefakta="true"></Card>
+      				<Card cardimage="/harrenogskildpadden.webp" cardimagealt="Thumbs up image" cardtitle="Harren og Skilpadden" cardtime="12" badgedyr="true" badgeserier="true"></Card>
+      				<Card cardimage="/lillefinger_hindbaerret.webp" cardimagealt="Thumbs up image" cardtitle="Lillefinger - Hindbærret" cardtime="10" badgeserier="true" badgemusik="true"></Card>
+      				<Card cardimage="/edderskoenne_edderkopper.webp" cardimagealt="Thumbs up image" cardtitle="Edderskønne edderkopper" cardtime="8" badgemusik="true" badgefakta="true"></Card>
+    			</div>
+  			</div>
+  			<div class="relative">
+    			<img src="/hanging_figur.svg" alt="" class="absolute scale-70 top-8 lg:left-10 lg:-top-5 lg:scale-100 intersect:animate-fade-down">
+  			</div>
+		</section>
 
 
 		<!-- Hvorfor bruge børne biffen sektion -->
-<section class="bg-[url(/hvorforbrugebf_mobil.svg)] bg-cover bg-center h-430 scale-110 ml-4 mt-40 lg:bg-[url(/hvorforbrugebf_bg.svg)] lg:h-360 lg:scale-100 ">
-	<div class="relative">
-		<img src="/figur_kategorier.svg" alt="" class="absolute z-20 scale-70 top-15 left-10 lg:left-30 lg:scale-150 lg:top-70">
-	</div>
-	<!-- Tekststykke -->
-	<div class="flex flex-col justify-center items-center text-center gap-4 pt-70">
-		<Heading htmlheading="h2" font="display" size="medium" stylingclasses="mb-6 text-secondary lg:mb-10">Hvorfor bruge BørneBiffen?</Heading>
-		<div class="w-80 text-center lg:w-170 lg:text-left">
-		<Text teksttype="brødtekst" >Børnebiffen giver børn et trygt sted at udforske film og historier, der passer til deres nysgerrighed og udvikling. </Text>
-		</div>
-		<div class="w-80 text-center lg:w-170 lg:text-left">
-		<Text teksttype="brødtekst">Universet er fri for reklamer og bygget, så både børn og voksne nemt kan finde rundt og få gode filmoplevelser sammen.</Text>
-		</div>
-		<div class="w-80 text-center mb-10 lg:w-170 lg:text-left">
-		<Text teksttype="brødtekst">Med appen til mobil og tablet kan filmhyggen følge med jer - hjemme, på farten eller hvor som helst det passer.</Text>
-		</div>
-	</div>
-
-	<!-- 3 Grunde til at bruge børnebiffen -->
-	<div class=" flex flex-col justify-center items-center lg:flex-row gap-10 lg:gap-20 intersect:animate-flip-down animate-duration-[3000ms]">
-
-		<!-- Cirkel 1 -->
-		<div class="flex flex-col items-center">
-			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 items-center flex justify-center lg:w-80 lg:h-80">
-				<img src="/mobil_tablet.svg" alt="Hav børnebiffen lige ved hånden" class="scale-85 pl-4 animate-wiggle animate-infinite animate-duration-[2000ms]">
+		<section class="bg-[url(/hvorforbrugebf_mobil.svg)] bg-cover bg-center h-430 scale-110 ml-4 mt-40 lg:bg-[url(/hvorforbrugebf_bg.svg)] lg:h-360 lg:scale-100 ">
+			<div class="relative">
+				<img src="/figur_kategorier.svg" alt="" class="absolute z-20 scale-70 top-15 left-10 lg:left-30 lg:scale-150 lg:top-70">
 			</div>
-			<div class="w-40 text-center lg:w-70">
-			<Heading htmlheading="h2" font="display" size="small" >Hav børnebiffen lige ved hånden</Heading>
+			<!-- Tekststykke -->
+			<div class="flex flex-col justify-center items-center text-center gap-4 pt-70">
+				<Heading htmlheading="h2" font="display" size="medium" stylingclasses="mb-6 text-secondary lg:mb-10">Hvorfor bruge BørneBiffen?</Heading>
+				<div class="w-80 text-center lg:w-170 lg:text-left">
+					<Text teksttype="brødtekst" >Børnebiffen giver børn et trygt sted at udforske film og historier, der passer til deres nysgerrighed og udvikling. </Text>
+				</div>
+				<div class="w-80 text-center lg:w-170 lg:text-left">
+					<Text teksttype="brødtekst">Universet er fri for reklamer og bygget, så både børn og voksne nemt kan finde rundt og få gode filmoplevelser sammen.</Text>
+				</div>
+				<div class="w-80 text-center mb-10 lg:w-170 lg:text-left">
+					<Text teksttype="brødtekst">Med appen til mobil og tablet kan filmhyggen følge med jer - hjemme, på farten eller hvor som helst det passer.</Text>
+				</div>
 			</div>
-		</div>
 
-		<!-- Cirkel 2 -->
-		<div>
-			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 grid grid-cols-6 grid-rows-6 lg:w-80 lg:h-80">
-				<img src="/gem_figur.svg" alt="figur" class="scale-70 col-start-2 col-end-6 row-start-2 ml-8 lg:col-start-3 lg:col-end-7 lg:row-start-3 lg:mt-4 lg:scale-100">
-				<img src="/filledheart.svg" alt="heart 1" class="col-start-3 col-end-6 row-start-4 scale-140 mt-4 rotate-10 lg:col-start-3 lg:col-end-4 lg:scale-300 lg:mt-8 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-500">
-				<img src="/filledheart.svg" alt="heart 2" class="col-start-4 col-end-6 row-start-2 scale-200 mt-6 mr-4 -rotate-10 lg:col-start-4 lg:col-end-6 lg:scale-300 lg:ml-6 lg:mt-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-200">
-				<img src="/filledheart.svg" alt="heart 3" class="col-start-3 col-end-6 row-start-3 scale-180 mt-3 mr-4 rotate-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-800">
+				<!-- 3 Grunde til at bruge børnebiffen -->
+			<div class=" flex flex-col justify-center items-center lg:flex-row gap-10 lg:gap-20 intersect:animate-flip-down animate-duration-[3000ms]">
+				<!-- Cirkel 1 -->
+				<div class="flex flex-col items-center">
+					<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 items-center flex justify-center lg:w-80 lg:h-80">
+						<img src="/mobil_tablet.svg" alt="Hav børnebiffen lige ved hånden" class="scale-85 pl-4 animate-wiggle animate-infinite animate-duration-[2000ms]">
+					</div>
+					<div class="w-40 text-center lg:w-70">
+						<Heading htmlheading="h2" font="display" size="small" >Hav børnebiffen lige ved hånden</Heading>
+					</div>
+				</div>
+
+				<!-- Cirkel 2 -->
+				<div>
+					<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 grid grid-cols-6 grid-rows-6 lg:w-80 lg:h-80">
+						<img src="/gem_figur.svg" alt="figur" class="scale-70 col-start-2 col-end-6 row-start-2 ml-8 lg:col-start-3 lg:col-end-7 lg:row-start-3 lg:mt-4 lg:scale-100">
+						<img src="/filledheart.svg" alt="heart 1" class="col-start-3 col-end-6 row-start-4 scale-140 mt-4 rotate-10 lg:col-start-3 lg:col-end-4 lg:scale-300 lg:mt-8 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-500">
+						<img src="/filledheart.svg" alt="heart 2" class="col-start-4 col-end-6 row-start-2 scale-200 mt-6 mr-4 -rotate-10 lg:col-start-4 lg:col-end-6 lg:scale-300 lg:ml-6 lg:mt-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-200">
+						<img src="/filledheart.svg" alt="heart 3" class="col-start-3 col-end-6 row-start-3 scale-180 mt-3 mr-4 rotate-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-800">
+					</div>
+					<div class="lg:w-70 text-center">
+						<Heading htmlheading="h2" font="display" size="small" >Gem dine farvoritter</Heading>
+					</div>
+				</div>
+
+				<!-- Cirkel 3 -->
+				<div class="flex flex-col items-center justify-center">
+					<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 lg:w-80 lg:h-80 flex justify-center items-center">
+						<Heading htmlheading="h2" font="display" size="large" stylingclasses="flex justify-center items-center text-bg justify-center animate-bounce animate-infinite animate-duration-[3000ms]">+400</Heading>
+					</div>
+					<div class="w-50 text-center lg:w-70 ">
+						<Heading htmlheading="h2" font="display" size="small">Se mere end 400+ film & serier</Heading>
+					</div>
+				</div>
 			</div>
-			<div class="lg:w-70 text-center">
-				<Heading htmlheading="h2" font="display" size="small" >Gem dine farvoritter</Heading>
+
+			<!-- Download knap -->
+			<div class="flex flex-col items-center justify-center mt-10 lg:mt-15">
+				<Text><Button variant="primary" size="large">Download app</Button></Text>
 			</div>
-		</div>
+		</section>
 
-		<!-- Cirkel 3 -->
-		<div class="flex flex-col items-center justify-center">
-			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 lg:w-80 lg:h-80 flex justify-center items-center">
-				<Heading htmlheading="h2" font="display" size="large" stylingclasses="flex justify-center items-center text-bg justify-center animate-bounce animate-infinite animate-duration-[3000ms]">+400</Heading>
+		<!-- Nyeste tilføjet - Card section -->
+		<section class="mt-40 container mx-auto px-4 mb-40 intersect:animate-fade-left">
+			<div class="mb-2 py-4">
+				<Heading htmlheading="h2" font="display" size="medium" >Nyeste tilføjet</Heading>
 			</div>
-			<div class="w-50 text-center lg:w-70 ">
-				<Heading htmlheading="h2" font="display" size="small">Se mere end 400+ film & serier</Heading>
+			<div class="overflow-x-auto">
+				<div class="flex flex-row gap-6 w-max px-6 bg-accent-dustgreen p-10 justify-center items-center rounded-3xl">
+	  				<Card cardimage="/lillefroe.webp" cardimagealt="Thumbs up image" cardtitle="Lille frø" cardtime="20" badgedyr="true" badgefilm="true"></Card>
+      				<Card cardimage="/ballerina.webp" cardimagealt="Thumbs up image" cardtitle="Ballerina" cardtime="22" badgemusik="true" badgefilm="true"></Card>
+      				<Card cardimage="/desmaavilde.webp" cardimagealt="Thumbs up image" cardtitle="De små vilde: Efterår" cardtime="8" badgedyr="true" badgefakta="true"></Card>
+      				<Card cardimage="/harrenogskildpadden.webp" cardimagealt="Thumbs up image" cardtitle="Harren og Skilpadden" cardtime="12" badgedyr="true" badgeserier="true"></Card>
+      				<Card cardimage="/lillefinger_hindbaerret.webp" cardimagealt="Thumbs up image" cardtitle="Lillefinger - Hindbærret" cardtime="10" badgeserier="true" badgemusik="true"></Card>
+      				<Card cardimage="/edderskoenne_edderkopper.webp" cardimagealt="Thumbs up image" cardtitle="Edderskønne edderkopper" cardtime="8" badgemusik="true" badgefakta="true"></Card>
+				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- Download knap -->
-	<div class="flex flex-col items-center justify-center mt-10 lg:mt-15">
-	<Text><Button variant="primary" size="large">Download app</Button></Text>
-	</div>
-
-</section>
-
-<section class="mt-40 container mx-auto px-4 mb-40 intersect:animate-fade-left">
-<div class="mb-2 py-4">
-	<Heading htmlheading="h2" font="display" size="medium" >Nyeste tilføjet</Heading>
-</div>
-<div class="overflow-x-auto">
-<div class="flex flex-row gap-6 w-max px-6 bg-accent-dustgreen p-10 justify-center items-center rounded-3xl">
-			<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					badgefakta="true"
-				></Card>
-
-				<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					badgefakta="true"
-				></Card>
-
-				<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					badgefakta="true"
-				></Card>
-
-				<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					bad gefakta="true"
-				></Card>
-
-				<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					badgefakta="true"
-				></Card>
-
-				<Card 
-					cardimage="/lillefroe.webp"
-					cardimagealt="Thumbs up image"
-					cardtitle="Rita og krokodillen"
-					cardtime="20"
-					badgemusik="true"
-					badgefakta="true"
-				></Card>
-			</div>
-			</div>
-</section>
+		</section>
 	</main>
 </MainLayout>
