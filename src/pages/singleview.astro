@@ -17,14 +17,14 @@ import Chipscategory from "../components/Chipscategory.astro";
   href="/listeview" 
   class="flex items-center justify-center w-12 h-12 ml-4 mt-6 md:mt-12 lg:ml-8 lg:mt-24"
 >
-  <img src="/arrow.svg" alt="Tilbage" class="w-8 h-8" />
+  <img src="/arrow.svg" alt="Tilbage" class="w-10 h-10" />
 </a>
 
    
 
   <!-- VIDEO -->
 <section 
-  class="w-full min-h-screen grid grid-cols-12 pt-12 bg-[url('/mobilskyer.svg')] md:bg-[url('/mobilskyer.svg')] lg:bg-[url('/samledeskyer.svg')] bg-cover bg-center bg-no-repeat lg:h-300"
+  class="w-full min-h-screen grid grid-cols-12 pt-12 bg-[url('/mobilskyer.svg')] md:bg-[url('/mobilskyer.svg')] lg:bg-[url('/samledeskyer.svg')] bg-cover bg-center bg-no-repeat lg:h-300 intersect:animate-fade-left animate-duration-1000"
 >
   <!-- Video wrapper -->
   <div class="col-span-12 md:col-span-12 lg:col-span-10 lg:col-start-2 w-full aspect-video overflow-hidden rounded-xl px-4 md:px-4 lg:px-0">
@@ -33,7 +33,7 @@ import Chipscategory from "../components/Chipscategory.astro";
 
 <!-- TEKST OVER SKY-BUNDEN -->
 <div class="col-span-12 md:col-span-12 lg:col-span-6 lg:col-start-2 flex flex-col items-start text-left px-4 md:px-4 lg:px-0 
-            -mt-12 md:-mt-16 lg:-mt-24">
+            -mt-12 md:-mt-16 lg:-mt-24 intersect:animate-fade-right animate-duration-1000">
     <!-- Heading -->
     <Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary mb-4">
       Lillefinger - Den skæve kasse
@@ -71,13 +71,13 @@ import Chipscategory from "../components/Chipscategory.astro";
 
 <!-- <img src="/lillefinger.webp" class="col-start-7 col-end-12 row-start-1 mt-10 md:col-start-7 md:col-end-10 md:mt-20 z-0"/> -->
 
-<Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary py-4">
+<Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary py-4 intersect:animate-fade-left animate-duration-1000">
     Mere fra Lillefinger
   </Heading>
 
 
   <!-- Baggrund der omslutter begge scrollområder -->
-  <div class="bg-accent-blue rounded-xl p-10 space-y-10 overflow-x-auto scrollbar-hide">
+  <div class="bg-accent-blue rounded-xl p-10 space-y-10 overflow-x-auto scrollbar-hide intersect:animate-fade-right animate-duration-1000">
 
     <!-- Række 1 -->
     <div class="flex gap-10 w-full">
@@ -252,11 +252,11 @@ import Chipscategory from "../components/Chipscategory.astro";
 
 <!-- start på "andre ser også" -->
  <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
-  <Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary py-4">
+  <Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary py-4 intersect:animate-fade-up animate-duration-1000">
 	Andre ser også
   </Heading>
   <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10">
+  <div class="flex gap-10 overflow-x-auto scrollbar-hide bg-accent-dustgreen rounded-xl p-10 intersect:animate-fade-down animate-duration-1000">
 
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
@@ -339,8 +339,8 @@ import Chipscategory from "../components/Chipscategory.astro";
 
 
 	<!-- Pil  -->
-  <a href="/listeview" class="mt-40 md:mt-48 ml-8 md:ml-12 flex flex-row items-center gap-4 w-auto h-12">
-  <img src="/arrow.svg" alt="Tilbage" class="w-8 h-8" />
+  <a href="/listeview" class="mt-10 lg:mt-20 ml-8 md:ml-12 lg:pb-20 flex flex-row items-center gap-4 w-auto h-12">
+  <img src="/arrow.svg" alt="Tilbage" class="w-10 h-10" />
   <Text teksttype="brødtekst">Vil du hellere se noget andet?</Text>
 </a>
 
