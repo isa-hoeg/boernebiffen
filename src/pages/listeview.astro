@@ -12,7 +12,7 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
 <MainLayout title="Titel">
     <Headerlistsingle></Headerlistsingle>
 <!-- start på hero -->
- <section class="grid grid-cols-12 grid-rows-1 mt-10">
+ <section class="grid grid-cols-12 grid-rows-1 mt-30">
   <!-- talebobbel -->
   <img src="/tale_bobbel.svg" class="col-start-1 col-span-8 row-start-1 mt-10 md:col-start-3 md:col-span-5 md:mt-10 z-0 intersect:animate-fade-up animate-once animate-duration-1000ms]"/>
 
@@ -60,12 +60,48 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
       <Card 
         cardimage="/lillefinger_denskaevekasse.webp"
         cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den.."
+        cardtitle="Lillefinger - Den..."
         cardcategory1="Fakta"
         cardcategory2="Film"
         cardtime="20 min"
         variant="Fakta"
         iconimg1="/fakta.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/slubre.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Slubre"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="4 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/soemanden.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Sømanden"
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
+        iconimg2="/film.svg"
+        class="flex-shrink-0 w-64"
+      />
+      <Card 
+        cardimage="/dennyesommerfulg.webp"
+        cardimagealt="Thumbs up image"
+        cardtitle="Den nye..."
+        cardcategory1="Musik"
+        cardcategory2="Film"
+        cardtime="6 min"
+        variant="Musik"
+        iconimg1="/musik.svg"
         iconimg2="/film.svg"
         class="flex-shrink-0 w-64"
       />
@@ -245,7 +281,7 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
         </div>
         <div class="flex flex-col gap-2">
             <div class="bg-accent-yellow rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-           <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center py-10 w-30 h-30">
+           <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center py-11 w-30 h-30">
             A-Å
              </Heading>
             </div>
