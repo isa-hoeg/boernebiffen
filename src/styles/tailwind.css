@@ -20,6 +20,7 @@
   src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
+
 @theme {
   /* Her tilføjes theme variable // tokens */
 
@@ -31,7 +32,7 @@
   --color-accent-turquoise: #7ad8c0;
   --color-accent-yellow: #ffe7ba;
   --color-accent-salmon: #ffc7b7;
-  --color-accent-dustgreen: #d9eada;
+  --color-accent-dustgreen: #BAD0BB;
   --color-accent-coral: #ec5e55;
   --color-accent-blue: #c9eefc;
   --color-hover: #AC54D9;
@@ -39,7 +40,16 @@
   /*Typografi */
   --font-display: "Chewy", sans-serif;
   --font-serif: "Merriweather Sans", serif;
+
+  
+  @keyframes scrollX {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  --animate-scrollX: scrollX 40s linear infinite;
 }
+
 
 @layer base {
 }
