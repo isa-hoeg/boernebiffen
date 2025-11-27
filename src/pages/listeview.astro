@@ -1,39 +1,33 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
-import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import Headerlistsingle from "../components/Headerlistsingle.astro";
 ---
 <MainLayout title="Min side">
-    <Headerlistsingle></Headerlistsingle>
-<!-- start på hero -->
- <section class="grid grid-cols-12 grid-rows-1 mt-5">
-  <!-- talebobbel -->
-  <img src="/tale_bobbel.svg" class="col-start-1 col-span-8 row-start-1 mt-10 md:col-start-3 md:col-span-5 md:mt-10 z-0 intersect:animate-fade-up animate-once animate-duration-1000ms]"/>
+   <Headerlistsingle></Headerlistsingle>
+    
+    <!-- start på hero -->
+    <section class="grid grid-cols-12 grid-rows-1 mt-5">
+        <!-- talebobbel -->
+        <img src="/tale_bobbel.svg" class="col-start-1 col-span-8 row-start-1 mt-10 md:col-start-3 md:col-span-5 md:mt-10 z-0 intersect:animate-fade-up animate-once animate-duration-1000ms]"/>
+         <!-- figur -->
+        <img src="/hero_listogsingle.svg" class="col-start-8 col-span-5 row-start-1 mt-10 md:col-start-7 md:col-span-3 md:mt-20 z-0 intersect:animate-jump-in animate-once animate-duration-1800ms]"/>
+        <!-- Tekst, som skal ovenpå boblen -->
+        <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary col-start-2 col-span-5 md:ml-0 md:mr-4 md:col-start-4 row-start-1 mt-26 md:mt-45 z-20">Hej Fiona! Hyggeligt<br>du er tilbage!</Heading>
+    </section>
+    <!-- slut på hero -->
 
-  <!-- figur -->
-  <img src="/hero_listogsingle.svg" class="col-start-8 col-span-5 row-start-1 mt-10 md:col-start-7 md:col-span-3 md:mt-20 z-0 intersect:animate-jump-in animate-once animate-duration-1800ms]"/>
-
-  <!-- TEKST, som skal ovenpå boblen -->
-  <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary col-start-2 col-span-5 md:ml-0 md:mr-4 md:col-start-4 row-start-1 mt-26 md:mt-45 z-20">Hej Fiona! Hyggeligt<br>du er tilbage!</Heading>
-</section>
-<!-- slut på hero -->
-
-<!-- start på "fortsæt med" -->
-<section class="container mx-auto px-4 md:px-0">
-  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-left animate-duration-1000">
-    Fortsæt med at se
-  </Heading>
-  <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto bg-accent-yellow rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
-    <!-- Wrapper til kortene, så de har fast bredde -->
-    <div class="flex gap-6 w-max">
-<Card 
+    <!-- start på "fortsæt med" -->
+    <section class="container mx-auto px-4 md:px-0">
+        <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-left animate-duration-1000">
+         Fortsæt med at se
+        </Heading>
+        <!-- Scroll-container -->
+        <div class="flex gap-10 overflow-x-auto bg-accent-yellow rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
+            <!-- Wrapper til kortene, så de har fast bredde -->
+            <div class="flex gap-6 w-max">
+                <Card 
 					cardimage="/vanten.webp"
 					cardimagealt="Thumbs up image"
 					cardtitle="Vanten"
@@ -81,24 +75,25 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
 					badgesfakta="true"
 					badgefilm="true"
 				></Card>
-    </div>
-  </div>
-</section>
-<!-- slut på fortsæt med -->
+            </div>
+        </div>
+    </section>
+    <!-- slut på fortsæt med -->
 
-<!-- start på "fordi du så vitello" -->
- <section class="container mx-auto mt-20 px-4 md:px-0">
-  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-right animate-duration-1000">
-   Fordi du så Vitello
-  </Heading>
-  <div class="relative">
-    <img src="/figur_vitello.svg" alt="figur" class="absolute right-5 -top-30 lg:right-20 lg:-top-32 z-10 scale-70 lg:scale-100">
-  </div>
-  <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10 intersect:animate-fade-left animate-duration-1000">
-    <!-- Wrapper til kortene, så de har fast bredde -->
-    <div class="flex gap-6 w-max">
-      <Card 
+
+    <!-- start på "fordi du så vitello" -->
+    <section class="container mx-auto mt-20 px-4 md:px-0">
+         <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-right animate-duration-1000">
+          Fordi du så Vitello
+        </Heading>
+        <div class="relative">
+            <img src="/figur_vitello.svg" alt="figur" class="absolute right-5 -top-30 lg:right-20 lg:-top-32 z-10 scale-70 lg:scale-100">
+        </div>
+        <!-- Scroll-container -->
+         <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10 intersect:animate-fade-left animate-duration-1000">
+             <!-- Wrapper til kortene, så de har fast bredde -->
+            <div class="flex gap-6 w-max">
+                  <Card 
 					cardimage="/vanten.webp"
 					cardimagealt="Thumbs up image"
 					cardtitle="Vanten"
@@ -146,124 +141,127 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
 					badgesfakta="true"
 					badgefilm="true"
 				></Card>
-    </div>
-  </div>
-</section>
-<!-- slut på "fordi du så vitello" -->
+            </div>
+        </div>
+    </section>
+    <!-- slut på "fordi du så vitello" -->
 
-<!-- start på kategorier -->
- <section class="bg-[url(/wavy_section_kategori.svg)] bg-cover bg-center min-h-[500px] lg:min-h-[600px] p-5 mt-20 flex flex-col justify-center">
-  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary container mx-auto intersect:animate-fade-left animate-duration-1000">
-    Kategorier
-  </Heading>
-    <div class="relative">
-    <img src="/figur_kategorier.svg" alt="figur" class="absolute left-2 -top-60 lg:left-90 lg:-top-70 scale-70 lg:scale-100 z-10">
-  </div>
 
-    <div class="flex flex-row gap-4 md:gap-10 justify-start md:justify-center overflow-x-auto px-4 py-10 intersect:animate-flip-up animate-once animate-duration-[2000ms]">
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-coral rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/dyr.svg" alt="dyr" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
-            </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Dyr
-             </Heading>
+    <!-- start på kategorier -->
+    <section class="bg-[url(/wavy_section_kategori.svg)] bg-cover bg-center min-h-[500px] lg:min-h-[600px] p-4 mt-20 flex flex-col justify-center">
+        <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary container mx-auto intersect:animate-fade-left animate-duration-1000">
+          Kategorier
+         </Heading>
+         <div class="relative">
+             <img src="/figur_kategorier.svg" alt="figur" class="absolute left-2 -top-60 lg:left-90 lg:-top-70 scale-70 lg:scale-100 z-10">
         </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-turquoise rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/musik.svg" alt="Musik" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+        <!-- flexbox med kategorier -->
+         <div class="flex flex-row gap-4 md:gap-10 justify-start md:justify-center overflow-x-auto px-4 py-10 intersect:animate-flip-up animate-once animate-duration-[2000ms]">
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-coral rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                     <img src="/dyr.svg" alt="dyr" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Dyr
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-           Musik
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-dustgreen rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/fakta.svg" alt="fakta" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-turquoise rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/musik.svg" alt="Musik" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Musik
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Fakta
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-salmon rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/popcorn.svg" alt="film" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-dustgreen rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/fakta.svg" alt="fakta" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+                </div>
+                 <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Fakta
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Film
-             </Heading>
-        </div>
-             <div class="flex flex-col gap-2">
-            <div class="bg-accent-pink rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/film.svg" alt="serier" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+            <div class="flex flex-col gap-2">
+                 <div class="bg-accent-salmon rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/popcorn.svg" alt="film" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Film
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-         Serier
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-yellow rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-           <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center py-11 w-30 h-30">
-            A-Å
-             </Heading>
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-pink rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/film.svg" alt="serier" class="w-20 h-20 md:w-30 md:h-30 md:p-4"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Serier
+                </Heading>
+             </div>
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-yellow rounded-full w-22 h-22 md:w-30 md:h-30 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center py-11 w-30 h-30">
+                 A-Å
+                </Heading>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                A-Å
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            A-Å
-             </Heading>
         </div>
-    </div>
+    </section>
+    <!-- slut på kategorier -->
 
- </section>
 
-<!-- slut på kategorier -->
-
-<!-- start på bokse med karakterer -->
- <section class="container mt-10 mx-auto">
-      <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 px-4 md:px-0 intersect:animate-fade-right animate-duration-1000">
-         Karakterer
-            </Heading>
- <section class="container mt-10 mx-auto intersect:animate-fade-right animate-duration-1000">
+    <!-- start på bokse med karakterer -->
+    <section class="container mt-10 mx-auto">
+        <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 px-4 md:px-0 intersect:animate-fade-right animate-duration-1000">
+             Karakterer
+        </Heading>
+        <div class="intersect:animate-fade-left animate-duration-1000">
             <div class="grid grid-cols-12 grid-rows-2 gap-6 px-4 md:px-0 ">
-            <div class="bg-accent-salmon col-start-1 col-span-6 md:col-span-4 rounded-xl flex flex-col gap-2 row-start-2 row-span-2 md:row-start-1 md:row-span-2 py-20 hover:scale-103 cursor-pointer">
+                <div class="bg-accent-salmon col-start-1 col-span-6 md:col-span-4 rounded-xl flex flex-col gap-2 row-start-2 row-span-2 md:row-start-1 md:row-span-2 py-20 hover:scale-103 cursor-pointer">
                     <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
-            Vitello
-             </Heading>
-            <img src="/vitello1.webp" alt="vitello" class="w-full h-auto object-contain"/>
-            <img src="/vitello2.webp" alt="vitello" class="w-full h-auto object-contain"/>            
-            </div>
+                     Vitello
+                    </Heading>
+                    <img src="/vitello1.webp" alt="vitello" class="w-full h-auto object-contain"/>
+                    <img src="/vitello2.webp" alt="vitello" class="w-full h-auto object-contain"/>            
+                </div>
             
-            <div class="bg-accent-dustgreen col-start-1 col-span-12 md:col-start-5 md:col-span-8 rounded-xl row-start-1 row-span-1 pt-7 hover:scale-103 cursor-pointer">
-            <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
-            Lillefinger
-             </Heading>
-            <img src="/lillefinger.webp" alt="lillefinger" class="w-full h-100 object-contain"/>
-            </div>
-            <div class="bg-accent-coral col-start-7 col-span-6 md:col-start-5 md:col-span-4 rounded-xl row-start-2 row-span-1 pt-5 hover:scale-103 cursor-pointer">
-                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
-            Cirkeline
-             </Heading>
-                <img src="/cirkeline.webp" alt="cirkeline" class="w-full h-80 object-contain"/>
-            </div>
-            <div class="bg-accent-yellow col-start-7 col-span-6 md:col-start-9 md:col-span-4 rounded-xl row-start-3 md:row-start-2 md:row-span-1 pt-5 hover:scale-103 cursor-pointer">
-                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
-            Pipungerne
-             </Heading>
-                <img src="/pipungerne.webp" alt="pipungerne" class="w-full h-80 object-contain"/>
-            </div>
-     </div>
+                <div class="bg-accent-dustgreen col-start-1 col-span-12 md:col-start-5 md:col-span-8 rounded-xl row-start-1 row-span-1 pt-7 hover:scale-103 cursor-pointer">
+                    <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+                    Lillefinger
+                    </Heading>
+                    <img src="/lillefinger.webp" alt="lillefinger" class="w-full h-100 object-contain"/>
+                 </div>
 
-</section>
-<!-- slut på bokse med karakterer -->
+                <div class="bg-accent-coral col-start-7 col-span-6 md:col-start-5 md:col-span-4 rounded-xl row-start-2 row-span-1 pt-5 hover:scale-103 cursor-pointer">
+                   <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+                     Cirkeline
+                    </Heading>
+                    <img src="/cirkeline.webp" alt="cirkeline" class="w-full h-80 object-contain"/>
+                </div>
+            
+                <div class="bg-accent-yellow col-start-7 col-span-6 md:col-start-9 md:col-span-4 rounded-xl row-start-3 md:row-start-2 md:row-span-1 pt-5 hover:scale-103 cursor-pointer">
+                    <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-start ml-4 md:ml-10">
+                    Pipungerne
+                    </Heading>
+                    <img src="/pipungerne.webp" alt="pipungerne" class="w-full h-80 object-contain"/>
+                </div>
+        </div>
+    </section>
+    <!-- slut på bokse med karakterer -->
 
-<!-- start på "andre ser også" -->
- <section class="container mx-auto mt-20 mb-40 px-4 md:px-0">
-  <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-left animate-duration-1000">
-Andre ser også
-  </Heading>
-  <!-- Scroll-container -->
-  <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
-    <!-- Wrapper til kortene, så de har fast bredde -->
-    <div class="flex gap-6 w-max">
+    
+    <!-- start på "andre ser også" -->
+    <section class="container mx-auto mt-20 mb-40 px-4 md:px-0">
+            <Heading htmlheading="h2" font="display" size="medium" stylingclasses="text-secondary py-4 intersect:animate-fade-left animate-duration-1000">
+                Andre ser også
+            </Heading>
+    
+            <!-- Scroll-container -->
+            <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
+                <!-- Wrapper til kortene, så de har fast bredde -->
+                 <div class="flex gap-6 w-max">
                 <Card 
 					cardimage="/vanten.webp"
 					cardimagealt="Thumbs up image"
@@ -312,8 +310,8 @@ Andre ser også
 					badgesfakta="true"
 					badgefilm="true"
 				></Card>
-    </div>
-  </div>
-</section>
-<!-- slut på "andre ser også" -->
+                 </div>
+             </div>
+    </section>
+    <!-- slut på "andre ser også" -->
 </MainLayout>
