@@ -19,20 +19,22 @@ import Button from "../components/Button.astro";
   <img src="/arrow.svg" alt="Tilbage" class="w-10 h-10" />
 </a>
 
+<!-- Pil slut -->
    
 
-  <!-- VIDEO -->
+  <!-- VIDEO-section start -->
 <section 
   class="w-full min-h-screen grid grid-cols-12 pt-12 bg-[url('/mobilskyer.svg')] md:bg-[url('/mobilskyer.svg')] lg:bg-[url('/samledeskyer.svg')] bg-cover bg-center bg-no-repeat lg:h-300 intersect:animate-fade-left animate-duration-1000"
 >
   <!-- Video wrapper -->
 <div class="col-span-12 md:col-span-12 lg:col-span-10 lg:col-start-2 relative w-full px-4 md:px-4 lg:px-0">
-  <!-- Video -->
+  
+	<!-- Video -->
   <div class="w-full aspect-video overflow-hidden rounded-xl">
     <video src="/video.webm" controls class="w-full h-full object-cover rounded-xl"></video>
   </div>
 
-  <!-- Figur udenfor video -->
+  <!-- Figur ovenpå video -->
   <img src="/figur_single_video.svg" alt="Dekorativ figur"
        class="absolute w-32 h-32 -top-24 right-16 -z-20 md:w-32 md:h-32 lg:w-60 lg:h-60 lg:-top-45 lg:right-56 lg:-z-20"/>
 
@@ -42,10 +44,11 @@ import Button from "../components/Button.astro";
 </div>
 
 
-<!-- TEKST OVER SKY-BUNDEN -->
+<!-- Tekst ovenpå sky -->
 <div class="col-span-12 md:col-span-12 lg:col-span-6 lg:col-start-2 flex flex-col items-start text-left px-4 md:px-4 lg:px-0 
             -mt-12 md:-mt-16 lg:-mt-24 intersect:animate-fade-right animate-duration-1000">
-    <!-- Heading -->
+
+			<!-- Heading -->
     <Heading htmlheading="h2" font="display" size="small" stylingclasses="text-secondary mb-4">
       Lillefinger - Den skæve kasse
     </Heading>
@@ -53,7 +56,7 @@ import Button from "../components/Button.astro";
 
 <!-- Kategorier -->
 <div class="flex w-full items-center mb-4 flex-wrap">
-  <!-- Venstre: Kategorier -->
+ 
   <div class="flex gap-2 flex-wrap">
     <div class="bg-accent-pink rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 cursor-pointer">
       <img src="/popcorn.svg" alt="Serier" class="w-4 h-4" />
@@ -63,7 +66,7 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <!-- Tid og Gem længere til venstre -->
+  <!-- Tid og gem -->
   <div class="flex gap-2 items-center flex-wrap ml-12 lg:ml-40">
     <Heading 
       htmlheading="h4" 
@@ -101,7 +104,11 @@ import Button from "../components/Button.astro";
   </div>
 
 </section>
-<!-- Mere fra-section  -->
+<!-- VIDEO-section slut -->
+
+
+
+<!-- Lillefinger-section / Mere fra-section start -->
 
 <section class="mx-auto max-w-7xl px-4 md:px-0 lg:mt-60">
 
@@ -246,7 +253,7 @@ import Button from "../components/Button.astro";
   </div>
 </section>
 
-<!-- slut på mere fra -->
+<!-- slut på lillefinger / mere fra-section -->
 
 <!-- start på "andre ser også" -->
  <section class="mx-auto max-w-7xl mt-20 px-4 md:px-0">
@@ -325,5 +332,7 @@ import Button from "../components/Button.astro";
   <img src="/arrow.svg" alt="Tilbage" class="w-10 h-10" />
   <Text teksttype="brødtekst">Vil du hellere se noget andet?</Text>
 </a>
+
+<!-- Slut på pil -->
 
 </MainLayout>
