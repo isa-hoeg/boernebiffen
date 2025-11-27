@@ -11,16 +11,48 @@ import Card from "../components/Card.astro";
 <MainLayout title="Titel">
 	<main class="">
 		<!-- Header forside -->
-		<section class="bg-[url(header_mobil.svg)] bg-contain bg-no-repeat h-auto min-h-64 w-full lg:bg-[url(/header_forside_desk.svg)] lg:bg-cover lg:bg-center lg:h-85">
-			<div class="flex flex-row justify-between">
+		<section class="bg-[url(header_mobil.svg)] bg-contain bg-no-repeat h-auto min-h-64 w-full lg:bg-[url(/header_forside_desk.svg)] lg:bg-cover lg:bg-center lg:h-105">
+			<div class="relative">
+				<img src="figur_header_forside.svg" alt="figur header" class="absolute top-18 right-20 scale-80 lg:top-32 lg:left-35 lg:scale-100 -z-1">
+			</div>
+<header
+  x-data="{ showmenu: false }">
+<div class="hidden lg:flex flex-row justify-between px-5">
 				<div>
-					<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 py-4 lg:scale-100"></a>
+					<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 p-4 lg:scale-100 lg:pt-6"></a>
 				</div>	
 				<div class="flex flex-row gap-6 mx-6 my-6">
 					<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
-					<Text><Link href="#" variant="primary" size="large">Log ind</Link></Text>
+      				<Text><Link href="allefilm" variant="primary" size="large">Log ind</Link></Text>
 				</div>
 			</div>
+
+
+<header x-data="{ showmenu: false }" class="relative">
+  <!-- Burger menu til mobil -->
+  <div class="lg:hidden flex items-center justify-between p-4">
+    <a href="/">
+      <img src="/logo.svg" alt="Logo" class="h-12">
+    </a>
+
+    <button class="cursor-pointer text-secondary" x-on:click="showmenu = !showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+           stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobil menu dropdown -->
+  <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" 
+       class="lg:hidden bg-bg w-full absolute top-full left-0 shadow-md backdrop-blur-sm z-10">
+    <ul class="flex flex-col gap-4 p-4">
+      	<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
+		<Text><Link href="allefilm" variant="primary" size="large">Log ind</Link></Text>
+    </ul>
+  </nav>
+</header>
 
 			<div class="hidden md:flex flex-col items-center ">
 				<div>
@@ -47,16 +79,16 @@ import Card from "../components/Card.astro";
 				</div>
 
 			<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh] lg:max-h-[120vh]">
-				<div class="text-center col-start-3 col-end-12 row-start-1 mt-6 lg:mt-28 lg:col-start-5 lg:col-end-9">
+				<div class="text-center col-start-3 col-end-12 row-start-1 mt-6 lg:mt-20 lg:col-start-5 lg:col-end-9">
 					<Text size="brødtekst">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
 				</div>
 
-				<div class="col-start-3 col-end-9 row-start-2 mt-7 z-20 lg:row-start-2 lg:col-start-5 lg:col-end-12 lg:ml-15  lg:mt-30">
+				<div class="col-start-3 row-start-2 mt-7 z-20 lg:row-start-2 lg:col-start-5  lg:ml-15 lg:mt-30 inline-block">
 					<Text><Button variant="primary" size="medium">Download app</Button></Text>
 				</div>
 
-				<div class="col-start-8 col-end-12 row-start-2 mt-7 lg:row-start-2 lg:col-start-7 lg:col-end-11 lg:mt-30 lg:ml-8">
-					<Text><Button variant="primary" size="medium">Log ind</Button></Text>
+				<div class="col-start-8 col-end-12 row-start-2 mt-7 lg:row-start-2 lg:col-start-7 lg:col-end-11 lg:mt-30 lg:ml-8 z-45">
+					<Text stylingclasses="inline-block"><Button variant="primary" size="medium">Log ind</Button></Text>
 				</div>
 			
 				<img src="/snor.svg" alt="snor" class="col-start-4 col-end-5 row-start-2 z-30 mt-7 scale-80 ml-3 lg:scale-100 lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:mt-28 lg:ml-5">
@@ -93,8 +125,8 @@ import Card from "../components/Card.astro";
 					cardimage="/lillefroe.webp"
 					cardimagealt="Thumbs up image"
 					cardtitle="Den lille frø"
-					cardcategory1="Musik"
-					cardcategory2="Fakta"
+					cardcategory1="musik"
+					cardcategory2="fakta"
 					cardtime="20 min"
 					variant="musik"
 					vairant=""
@@ -142,11 +174,16 @@ import Card from "../components/Card.astro";
 				></Card>
 				</div>
 			</div>
+			<div class="relative">
+				<img src="/hanging_figur.svg" alt="" class="absolute scale-70 top-54 lg:left-10 lg:top-16 lg:scale-100">
+			</div>
 		</section>
 
 		<!-- Hvorfor bruge børne biffen sektion -->
-<section class="bg-[url(/hvorforbrugebf_mobil.svg)] bg-cover bg-center h-430 scale-110 ml-4 lg:bg-[url(/hvorforbrugebf_bg.svg)] lg:h-360 lg:scale-100 lg:ml-0">
-	
+<section class="bg-[url(/hvorforbrugebf_mobil.svg)] bg-cover bg-center h-430 scale-110 ml-4 mt-40 lg:bg-[url(/hvorforbrugebf_bg.svg)] lg:h-360 lg:scale-100 ">
+	<div class="relative">
+		<img src="/figur_kategorier.svg" alt="" class="absolute z-20 scale-70 top-15 left-10 lg:left-50 lg:scale-150 lg:top-70">
+	</div>
 	<!-- Tekststykke -->
 	<div class="flex flex-col justify-center items-center text-center gap-4 pt-60">
 		<Heading htmlheading="h2" font="display" size="small" class="mb-6">Hvorfor bruge BørneBiffen?</Heading>
@@ -206,7 +243,7 @@ import Card from "../components/Card.astro";
 </section>
 
 <section class="mt-40 container mx-auto px-4">
-<div class="mb-8 py-4">
+<div class="mb-2 py-4">
 	<Heading htmlheading="h2" font="display" size="medium" >Nyeste tilføjet</Heading>
 </div>
 <div class="overflow-x-auto">
