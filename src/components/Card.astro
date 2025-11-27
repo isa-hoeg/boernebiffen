@@ -1,41 +1,31 @@
 ---
-const { cardimage="", cardimagealt="", cardtitle="", cardcategory1="", cardcategory2="", cardtime="", variant="", iconimg1="", iconimg2="" } = Astro.props;
-import Heading from "./Heading.astro";
-
-import Button from "./Button.astro";
-
-const variantClasses = {
-  "animal": "accent-coral",  
-  "musik": "accent-turquoise",
-  "fakta": "accent-dustgreen",
-  "film": "accent-salmon",
-  "serier": "accent-pink",
-  "a_å": "accent-yellow",
-};
+const { cardimage="", cardimagealt="", cardtitle="", cardtime="", badgemusik="false", badgefakta="false", badgedyr="false", badgefilm="false", badgeserier="false"} = Astro.props;
+import Button from './Button.astro';
+import Heading from './Heading.astro';
 ---
 
-<a href="singleview">
-<div class="card bg-bg w-55 lg:w-96 rounded-xl hover:scale-105 cursor-pointer">
-  <figure>
-    <img class="rounded-t-xl"
-      src={cardimage}
-      alt={cardimagealt} />
-  </figure>
+<a href="/singleview" class="hover:scale-105 transform transition-transform duration-300 ease-out">
+  <div class="card bg-base-100 w-70 lg:w-96 shadow-sm rounded-4x @container">
+    <img src={cardimage}alt={cardimagealt} class="h-60 w-full object-cover rounded-tr-xl rounded-tl-xl"/>
   
-  <div class="p-4">
-    <div class="flex justify-between items-center">
-    <Heading htmlheading="h3" size="small" font="display">
-      {cardtitle}
-    </Heading>
-    <Heading htmlheading="h4" size="xsmall" font="display">{cardtime} <img src="/ur.svg" alt="Clock icon" class="inline w-6 h-6 ml-1"/></Heading>
-   </div>
-    <div class="flex justify-between">
-        <div class="flex flex-row gap-4">
-            <Heading htmlheading="h4" size="xsmall" variant={variantClasses[variant]} font="display">{cardcategory1}<img src={iconimg1} alt="" class="inline w-6 h-6"></Heading>
-            <Heading htmlheading="h4" size="xsmall" font="display">{cardcategory2}<img src={iconimg2} alt="" class="inline w-6 h-6"></Heading>
+    <div class="card-body bg-bg text-beige p-4 rounded-br-xl rounded-bl-xl">
+      <div class="flex flex-row mb-4 justify-between">
+        <Heading htmlheading="h3" size="small" font="display" stylingclasses="w-58 truncate text-secondary"> {cardtitle} </Heading>
+        <p class="flex flex-row font-display text-secondary gap-2 text-xl items-center">{cardtime} <span class="hidden sm:inline"> min</span><img src="/ur.svg" alt="" class="w-6 h-6"></p>
+      </div>  
+
+      <div class="flex flex-row justify-between items-center">
+        <figure class="flex flex-row gap-2">
+          {(badgemusik === "true") && <div class=" bg-accent-turquoise px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Musik</span><img src="/musik.svg" alt="" class="w-5 h-5"></div>}
+          {(badgefakta !== "false") && <div class=" bg-accent-dustgreen px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Fakta</span> <img src="/fakta.svg" alt="" class="w-5 h-5"></div>}
+          {(badgedyr === "true") && <div class=" bg-accent-coral px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Dyr</span> <img src="/dyr.svg" alt="" class="w-5 h-5"></div>}
+          {(badgefilm === "true") && <div class=" bg-accent-salmon px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Film</span> <img src="/film.svg" alt="" class="w-5 h-5"></div>}
+          {(badgeserier === "true") && <div class=" bg-accent-pink px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Serier</span> <img src="/serier.svg" alt="" class="w-5 h-5"></div>}
+        </figure>
+        <div>
+          <Button variant="like" size="small" icon="/emptyheart.svg" iconHover="/filledheart.svg">Gem</Button>
         </div>
-        <Button variant="like" size="small" icon="/emptyheart.svg" iconHover="/filledheart.svg">Gem</Button>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 </a>

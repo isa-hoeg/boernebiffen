@@ -4,18 +4,20 @@ import Heading from "./Heading.astro";
 const { icon = "", iconalt = "", color = "", category = "" } = Astro.props;
 
 const colors = {
-  coral: "bg-coral",  
-  turquoise: "bg-turquoise",
-  dustgreen: "bg-dustgreen",
-  salmon: "bg-salmon",
-  pink: "bg-pink",
-  yellow: "bg-yellow",
+  coral: "bg-accent-coral",
+  turquoise: "bg-accent-turquoise",
+  dustgreen: "bg-accent-dustgreen",
+  salmon: "bg-accent-salmon",
+  pink: "bg-accent-pink",
+  yellow: "bg-accent-yellow",
 };
 ---
 
-<div class="rounded-sm" >
-    <div class={colors[color]}>
-        <Heading htmlheading="h4" size="xsmall" font="display"> {category} </Heading>
-        <img src={icon} alt={iconalt}>
-    </div>
+<div class="rounded-sm">
+  <div class={"flex items-center gap-2 px-2 py-1 " + (colors[color] || "")}>
+    <Heading htmlheading="h4" size="xsmall" font="display">
+      <span class="hidden sm:inline">{category}</span>
+    </Heading>
+    <img src={icon} alt={iconalt} class="w-5 h-5 inline-block" />
+  </div>
 </div>
