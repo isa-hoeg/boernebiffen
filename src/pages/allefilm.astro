@@ -1,248 +1,205 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Headerlistsingle from "../components/Headerlistsingle.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
-import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 ---
 <MainLayout title="Alle film">
 	<main class="">
 		<Headerlistsingle></Headerlistsingle>
         <div class="relative">
-         <img src="/hero_forside1.svg" alt="figur" class="absolute -left-10 -top-43 scale-50 md:-left-15 md:-top-27 md:scale-60 lg:left-25 lg:-top-23 z-10 lg:scale-70">
-         </div>
-			<section class="container mx-auto">
+            <img src="/hanging_figur.svg" alt="figur" class="absolute -left-10 -top-45 scale-50 md:-left-15 md:-top-27 md:scale-60 lg:left-25 lg:-top-23 z-10 lg:scale-70">
+        </div>
+
+	<section class="container mx-auto">
 			<Heading htmlheading="h1" font="display" size="large" stylingclasses="text-secondary text-center">Alle film</Heading>
-    <div class="w-full max-w-sm mx-auto">
-  <div class="relative">
-    <input 
-      type="text" 
-      placeholder="Vitello..." 
-      class="w-full border placeholder-secondary  placeholder:font-brødtekst border-gray-100 rounded-full py-2 my-10 pl-3 pr-10 focus:outline-none focus:ring-2 focus:ring-secondary"
-    >
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      fill="none" 
-      viewBox="0 0 24 24" 
-      stroke="currentColor"
-      class="w-5 h-5 text-secondary absolute right-3 top-1/2 -translate-y-1/2 hover:scale-110 cursor-pointer"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.1-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" />
-    </svg>
-  </div>
-</div>
+    
+        <!-- start på søgefunktion -->
+        <div class="w-full max-w-sm mx-auto">
+             <div class="relative">
+                <input 
+                type="text" 
+                placeholder="Vitello..." 
+                class="w-full border placeholder-secondary  placeholder:font-brødtekst border-gray-100 rounded-full py-2 my-10 pl-3 pr-10 focus:outline-none focus:ring-2 focus:ring-secondary"
+                >
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+                class="w-5 h-5 text-secondary absolute right-3 top-1/2 -translate-y-1/2 hover:scale-110 cursor-pointer"
+                >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.1-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" />
+                </svg>
+            </div>
+        </div>
 
- <!-- start på kategorier -->
-
+        <!-- start på kategorier -->
         <div class="flex flex-row gap-4 md:gap-8 justify-center px-4 intersect:animate-flip-up animate-once animate-duration-[2000ms]">
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-coral rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/dyr.svg" alt="dyr" class="w-20 h-20"/>
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-coral rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                     <img src="/dyr.svg" alt="dyr" class="w-20 h-20"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Dyr
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Dyr
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-turquoise rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/musik.svg" alt="Musik" class="w-20 h-20"/>
+        
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-turquoise rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/musik.svg" alt="Musik" class="w-20 h-20"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Musik
+                 </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-           Musik
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-dustgreen rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/fakta.svg" alt="fakta" class="w-20 h-20"/>
+
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-dustgreen rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/fakta.svg" alt="fakta" class="w-20 h-20"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Fakta
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Fakta
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-salmon rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/popcorn.svg" alt="film" class="w-20 h-20"/>
+
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-salmon rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/popcorn.svg" alt="film" class="w-20 h-20"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Film
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            Film
-             </Heading>
-        </div>
-             <div class="flex flex-col gap-2">
-            <div class="bg-accent-pink rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-               <img src="/film.svg" alt="serier" class="w-20 h-20"/>
+
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-pink rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                    <img src="/film.svg" alt="serier" class="w-20 h-20"/>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    Serier
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-         Serier
-             </Heading>
-        </div>
-        <div class="flex flex-col gap-2">
-            <div class="bg-accent-yellow rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
-           <Heading htmlheading="h4" font="display" size="xsmall" stylingclasses="text-secondary text-center py-11 w-30 h-30">
-            A-Å
-             </Heading>
+
+            <div class="flex flex-col gap-2">
+                <div class="bg-accent-yellow rounded-full w-15 h-15 lg:w-22 lg:h-22 p-4 flex items-center justify-center hover:scale-110 cursor-pointer">
+                <Heading htmlheading="h4" font="display" size="xsmall" stylingclasses="text-secondary text-center py-11 w-30 h-30">
+                    A-Å
+                </Heading>
+                </div>
+                <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
+                    A-Å
+                </Heading>
             </div>
-             <Heading htmlheading="h3" font="display" size="small" stylingclasses="text-secondary text-center">
-            A-Å
-             </Heading>
         </div>
-    </div>
-    <!-- slut på kategorier -->
+        <!-- slut på kategorier -->
     </section>
 
     <!-- start på sektion med film -->
-    <section class="bg-accent-dustgreen container mx-auto rounded-xl px-4 md:px-10 p-10 gap-6 mt-20 mb-40 grid grid-cols-2 lg:grid-cols-3 intersect:animate-fade-left animate-duration-1000">
-         <Card 
-        cardimage="/vanten.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Vanten"
-        cardcategory1="Musik"
-        cardcategory2="film"
-        cardtime="8 min"
-        variant="musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/ritaogkrokodille.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Rita og Krokodille"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="5 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/lillefinger_denskaevekasse.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den.."
-        cardcategory1="Fakta"
-        cardcategory2="Film"
-        cardtime="20 min"
-        variant="Fakta"
-        iconimg1="/fakta.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-         <Card 
-        cardimage="/vanten.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Vanten"
-        cardcategory1="Musik"
-        cardcategory2="film"
-        cardtime="8 min"
-        variant="musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/ritaogkrokodille.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Rita og Krokodille"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="5 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/lillefinger_denskaevekasse.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den.."
-        cardcategory1="Fakta"
-        cardcategory2="Film"
-        cardtime="20 min"
-        variant="Fakta"
-        iconimg1="/fakta.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-
+    <section class="bg-accent-dustgreen container mx-auto lg:grid lg:grid-cols-3 mt-20 mb-40 rounded-xl px-4 py-6 lg:px-10 gap-6 intersect:animate-fade-left animate-duration-1000">
+        <div class="flex overflow-x-auto space-x-4 mb-6 lg:grid lg:gap-6">
+                <Card 
+					cardimage="/vanten.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Vanten"
+					cardtime="8"
+					badgemusik="true"
+					badgefakta="true"
+				></Card>
+                <Card 
+					cardimage="/ritaogkrokodille.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Rita og Krokodillen"
+					cardtime="5"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/lillefinger_denskaevekasse.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Lillefinger - den skæve kasse"
+					cardtime="20"
+					badgeserier="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/slubre.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Slubre"
+					cardtime="4"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+        </div>
+        <div class="flex overflow-x-auto space-x-4 mb-6 lg:grid lg:gap-6">
+                <Card 
+					cardimage="/soemanden.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Sømanden"
+					cardtime="6"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/dennyesommerfulg.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den nye sommerfugl"
+					cardtime="6"
+					badgesfakta="true"
+					badgefilm="true"
+				></Card>
+                 <Card 
+					cardimage="/vanten.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Vanten"
+					cardtime="8"
+					badgemusik="true"
+					badgefakta="true"
+				></Card>
+                <Card 
+					cardimage="/ritaogkrokodille.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Rita og Krokodillen"
+					cardtime="5"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                </div>
+            <div class="flex overflow-x-auto space-x-4 mb-6 lg:grid lg:gap-6">
+                <Card 
+					cardimage="/lillefinger_denskaevekasse.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Lillefinger - den skæve kasse"
+					cardtime="20"
+					badgeserier="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/slubre.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Slubre"
+					cardtime="4"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/soemanden.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Sømanden"
+					cardtime="6"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/dennyesommerfulg.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den nye sommerfugl"
+					cardtime="6"
+					badgesfakta="true"
+					badgefilm="true"
+				></Card>
+            </div>
     </section>
-
     <!-- slut på sektion med film -->
-
 	</main>
 </MainLayout>
