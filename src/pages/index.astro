@@ -11,107 +11,272 @@ import Card from "../components/Card.astro";
 <MainLayout title="Titel">
 	<main class="">
 		<!-- Header forside -->
-		<section class="bg-[url(header_mobil.svg)] bg-contain bg-no-repeat h-auto min-h-64 w-full lg:bg-[url(/header-forside.svg)] lg:bg-cover lg:bg-center lg:h-110 lg:w-full">
-			<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 py-4 lg:scale-100"></a>
+		<section class="bg-[url(header_mobil.svg)] bg-contain bg-no-repeat h-auto min-h-64 w-full lg:bg-[url(/header_forside_desk.svg)] lg:bg-cover lg:bg-center lg:h-85">
+			<div class="flex flex-row justify-between">
+				<div>
+					<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 py-4 lg:scale-100"></a>
+				</div>	
+				<div class="flex flex-row gap-6 mx-6 my-6">
+					<Text><Link href="#" variant="primary" size="large">Opret profil</Link></Text>
+					<Text><Link href="#" variant="primary" size="large">Log ind</Link></Text>
+				</div>
+			</div>
 
-			<div class="hidden md:flex flex-col items-center -m-6">
-				<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
-				<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
-				<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
+			<div class="hidden md:flex flex-col items-center ">
+				<div>
+					<Heading htmlheading="h2" font="display" size="medium" class="">BørneBiffen</Heading>
+				</div>
+
+				<div class="-mt-10">
+					<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
+				</div>
+
+				<div class="-mt-10">
+				<Heading htmlheading="h2" font="display" size="medium">i børnehøjde</Heading>
+				</div>
 			</div>
 		</section>
 		
 		<!-- Hero section -->
-		 <section class="bg-[url(hero_mobil.svg)] lg:bg-[url(/hero_bg.svg)] bg-cover bg-center h-200 w-full -mt-40">
-			<div class="flex flex-col items-center mt-20 lg:hidden">
-				<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
-				<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
-				<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
-				<Text size="brødtekst" stylingclasses="text-center w-70 pt-6">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
+		 <section class="bg-[url(hero_mobil.svg)] lg:bg-[url(/hero_bg.svg)] bg-cover bg-center h-185 w-full -mt-30">
+			<div class="flex flex-col items-center mt-20 ">
+				<div class="lg:hidden text-center">
+					<Heading htmlheading="h2" font="display" size="large" class="">BørneBiffen</Heading>
+					<Heading htmlheading="h1" font="display" size="xlarge" class="">Underholdning</Heading>
+					<Heading htmlheading="h2" font="display" size="large">i børnehøjde</Heading>
+				</div>
+
+			<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh] lg:max-h-[120vh]">
+				<div class="text-center col-start-3 col-end-12 row-start-1 mt-6 lg:mt-28 lg:col-start-5 lg:col-end-9">
+					<Text size="brødtekst">Nøje udvalgte kortfilm til børn mellem 3 og 7 år. Trygt, gratis og lige ved hånden med dit bibliotekslogin.</Text>
+				</div>
+
+				<div class="col-start-3 col-end-9 row-start-2 mt-7 z-20 lg:row-start-2 lg:col-start-5 lg:col-end-12 lg:ml-15  lg:mt-30">
+					<Text><Button variant="primary" size="medium">Download app</Button></Text>
+				</div>
+
+				<div class="col-start-8 col-end-12 row-start-2 mt-7 lg:row-start-2 lg:col-start-7 lg:col-end-11 lg:mt-30 lg:ml-8">
+					<Text><Button variant="primary" size="medium">Log ind</Button></Text>
+				</div>
+			
+				<img src="/snor.svg" alt="snor" class="col-start-4 col-end-5 row-start-2 z-30 mt-7 scale-80 ml-3 lg:scale-100 lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:mt-28 lg:ml-5">
+				<img src="/hero_forside1.svg" alt="figur1" class="col-start-1 col-end-5 row-start-5 z-10 lg:row-start-3 lg:mt-20">
+				<img src="/hero_forside2.svg" alt="figur2" class="col-start-5 col-end-7 row-start-6 mt-8 lg:row-start-3 lg:col-start-3 lg:col-end-6 lg:ml-6 lg:mt-20">
+				<img src="/hero_forside3.svg" alt="figur3" class="col-start-4 col-end-10 row-start-2 mt-8 z-10 lg:col-start-6 lg:col-end-10 lg:row-start-2 lg:mt-28">
+				<img src="/hero_forside4.svg" alt="figur4" class="col-start-8 col-end-12 row-start-5 lg:col-start-10 lg:col-end-12 lg:row-start-3 ">
+				<img src="/heroforside_5.svg" alt="figur5" class="col-start-2 col-end-5 row-start-4 lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:ml-8">
 			</div>
-			<div class="grid grid-cols-12 grid-rows-8 min-w-full max-h-[60vh]">
-				<img src="/hero_forside1.svg" alt="figur1" class="col-start-1 col-end-5 row-start-4 z-10 mt-6">
-				<img src="/hero_forside2.svg" alt="figur2" class="col-start-5 col-end-7 row-start-6">
-				<img src="/hero_forside3.svg" alt="figur3" class="col-start-4 col-end-10 row-start-1 mt-8 ml-4 z-10">
-				<img src="/hero_forside4.svg" alt="figur4" class="col-start-8 col-end-12 row-start-4">
-				<img src="/heroforside_5.svg" alt="figur5" class="col-start-2 col-end-5 row-start-3">
 			</div>
 		 </section>
 
 		 <!-- Cards section -->
-		  <section class="bg-[url(/wavy_mobil.svg)] lg:bg-[url(/wavy_section.svg)] bg-cover bg-center h-215 w-full py-20 flex z-10">
-			<div class="overflow-auto">
-			<div class="flex flex-row gap-10 w-max px-6">
-			<Card 
-				cardimage="/lillefroe.webp"
-				cardimagealt="Thumbs up image"
-				cardtitle="Den lille frø"
-				cardcategory1="Musik"
-				cardcategory2="Fakta"
-				cardtime="20 min"
-				variant="musik"
-				vairant=""
-				iconimg1="/musik.svg"
-				iconimg2="/fakta.svg"
-			></Card>
-
-			<Card 
-				cardimage="/lillefroe.webp"
-				cardimagealt="Thumbs up image"
-				cardtitle="Den lille frø"
-				cardcategory1="Musik"
-				cardcategory2="Fakta"
-				cardtime="20 min"
-				variant="musik"
-				vairant=""
-				iconimg1="/musik.svg"
-				iconimg2="/fakta.svg"
-			></Card>
-
-			<Card 
-				cardimage="/lillefroe.webp"
-				cardimagealt="Thumbs up image"
-				cardtitle="Den lille frø"
-				cardcategory1="Musik"
-				cardcategory2="Fakta"
-				cardtime="20 min"
-				variant="musik"
-				vairant=""
-				iconimg1="/musik.svg"
-				iconimg2="/fakta.svg"
-			></Card>
-
-			<Card 
-				cardimage="/lillefroe.webp"
-				cardimagealt="Thumbs up image"
-				cardtitle="Den lille frø"
-				cardcategory1="Musik"
-				cardcategory2="Fakta"
-				cardtime="20 min"
-				variant="musik"
-				vairant=""
-				iconimg1="/musik.svg"
-				iconimg2="/fakta.svg"
-			></Card>
-
-			<Card 
-				cardimage="/lillefroe.webp"
-				cardimagealt="Thumbs up image"
-				cardtitle="Den lille frø"
-				cardcategory1="Musik"
-				cardcategory2="Fakta"
-				cardtime="20 min"
-				variant="musik"
-				vairant=""
-				iconimg1="/musik.svg"
-				iconimg2="/fakta.svg"
-			></Card>
+		  <section class="bg-[url(/wavy_mobil.svg)] -mt-40 lg:bg-[url(/wavy_section.svg)] bg-cover bg-center h-215 w-full py-20 z-10 flex flex-col relative">
+			<div class="absolute left-8 top-55 lg:left-8 lg:top-45">					
+				<Heading htmlheading="h2" font="display" size="medium" >Hvad hitter lige nu:</Heading>
 			</div>
+			<div class="overflow-x-auto">
+				<div class="flex flex-row gap-10 w-max px-6 mt-50">
+				<Card 
+					cardimage="/lillefroe.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den lille frø"
+					cardcategory1="Musik"
+					cardcategory2="Fakta"
+					cardtime="20 min"
+					variant="musik"
+					vairant=""
+					iconimg1="/musik.svg"
+					iconimg2="/fakta.svg"
+				></Card>
+
+				<Card 
+					cardimage="/lillefroe.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den lille frø"
+					cardcategory1="Musik"
+					cardcategory2="Fakta"
+					cardtime="20 min"
+					variant="musik"
+					vairant=""
+					iconimg1="/musik.svg"
+					iconimg2="/fakta.svg"
+				></Card>
+
+				<Card 
+					cardimage="/lillefroe.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den lille frø"
+					cardcategory1="Musik"
+					cardcategory2="Fakta"
+					cardtime="20 min"
+					variant="musik"
+					vairant=""
+					iconimg1="/musik.svg"
+					iconimg2="/fakta.svg"
+				></Card>
+
+				<Card 
+					cardimage="/lillefroe.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den lille frø"
+					cardcategory1="Musik"
+					cardcategory2="Fakta"
+					cardtime="20 min"
+					variant="musik"
+					vairant=""
+					iconimg1="/musik.svg"
+					iconimg2="/fakta.svg"
+				></Card>
+
+				<Card 
+					cardimage="/lillefroe.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den lille frø"
+					cardcategory1="Musik"
+					cardcategory2="Fakta"
+					cardtime="20 min"
+					variant="musik"
+					vairant=""
+					iconimg1="/musik.svg"
+					iconimg2="/fakta.svg"
+				></Card>
+				</div>
 			</div>
 		</section>
 
-<section class="container mx-auto p-4">
+		<!-- Hvorfor bruge børne biffen sektion -->
+<section class="bg-[url(/hvorforbrugebf_mobil.svg)] bg-cover bg-center h-430 scale-110 ml-4 lg:bg-[url(/hvorforbrugebf_bg.svg)] lg:h-360 lg:scale-100 lg:ml-0">
+	
+	<!-- Tekststykke -->
+	<div class="flex flex-col justify-center items-center text-center gap-4 pt-60">
+		<Heading htmlheading="h2" font="display" size="small" class="mb-6">Hvorfor bruge BørneBiffen?</Heading>
+		<div class="w-80 text-center lg:w-150 lg:text-left">
+		<Text teksttype="brødtekst" >Børnebiffen giver børn et trygt sted at udforske film og historier, der passer til deres nysgerrighed og udvikling. </Text>
+		</div>
+		<div class="w-80 text-center lg:w-150 lg:text-left">
+		<Text teksttype="brødtekst">Universet er fri for reklamer og bygget, så både børn og voksne nemt kan finde rundt og få gode filmoplevelser sammen.</Text>
+		</div>
+		<div class="w-80 text-center mb-10 lg:w-150 lg:text-left">
+		<Text teksttype="brødtekst">Med appen til mobil og tablet kan filmhyggen følge med jer - hjemme, på farten eller hvor som helst det passer.</Text>
+		</div>
+	</div>
 
+	<!-- 3 Grunde til at bruge børnebiffen -->
+	<div class=" flex flex-col justify-center items-center lg:flex-row gap-10 lg:gap-20">
+
+		<!-- Cirkel 1 -->
+		<div class="flex flex-col items-center">
+			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 items-center flex justify-center lg:w-80 lg:h-80">
+				<img src="/mobil_tablet.svg" alt="Hav børnebiffen lige ved hånden" class="scale-85 pl-4 animate-wiggle animate-infinite animate-duration-[2000ms]">
+			</div>
+			<div class="w-40 text-center lg:w-70">
+			<Heading htmlheading="h2" font="display" size="small" >Hav børnebiffen lige ved hånden</Heading>
+			</div>
+		</div>
+
+		<!-- Cirkel 2 -->
+		<div>
+			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 grid grid-cols-6 grid-rows-6 lg:w-80 lg:h-80">
+				<img src="/gem_figur.svg" alt="figur" class="scale-70 col-start-2 col-end-6 row-start-2 ml-8 lg:col-start-3 lg:col-end-7 lg:row-start-3 lg:mt-4 lg:scale-100">
+				<img src="/filledheart.svg" alt="heart 1" class="col-start-3 col-end-6 row-start-4 scale-140 mt-4 rotate-10 lg:col-start-3 lg:col-end-4 lg:scale-300 lg:mt-8 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-500">
+				<img src="/filledheart.svg" alt="heart 2" class="col-start-4 col-end-6 row-start-2 scale-200 mt-6 mr-4 -rotate-10 lg:col-start-4 lg:col-end-6 lg:scale-300 lg:ml-6 lg:mt-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-200">
+				<img src="/filledheart.svg" alt="heart 3" class="col-start-3 col-end-6 row-start-3 scale-180 mt-3 mr-4 rotate-10 animate-jump animate-infinite animate-duration-[5000ms] animate-delay-800">
+			</div>
+			<div class="lg:w-70 text-center">
+				<Heading htmlheading="h2" font="display" size="small" >Gem dine farvoritter</Heading>
+			</div>
+		</div>
+
+		<!-- Cirkel 3 -->
+		<div class="flex flex-col items-center justify-center">
+			<div class=" bg-secondary w-50 h-50 rounded-full mt-10 mb-2 lg:w-80 lg:h-80 flex justify-center items-center">
+				<Heading htmlheading="h2" font="display" size="large" stylingclasses="flex justify-center items-center text-bg justify-center">+400</Heading>
+			</div>
+			<div class="w-50 text-center lg:w-70">
+				<Heading htmlheading="h2" font="display" size="small">Se mere end 400+ film & serier</Heading>
+			</div>
+		</div>
+	</div>
+
+	<!-- Download knap -->
+	<div class="flex flex-col items-center justify-center mt-10 lg:mt-15">
+	<Text><Button variant="primary" size="large">Download app</Button></Text>
+	</div>
+
+</section>
+
+<section class="mt-40 container mx-auto px-4">
+<div class="mb-8 py-4">
+	<Heading htmlheading="h2" font="display" size="medium" >Nyeste tilføjet</Heading>
+</div>
+<div class="overflow-x-auto">
+<div class="flex flex-row gap-10 w-max px-6 bg-accent-dustgreen p-10 justify-center items-center rounded-3xl">
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+
+			<Card 
+				cardimage="/lillefroe.webp"
+				cardimagealt="Thumbs up image"
+				cardtitle="Den lille frø"
+				cardcategory1="Musik"
+				cardcategory2="Fakta"
+				cardtime="20 min"
+				variant="musik"
+				vairant=""
+				iconimg1="/musik.svg"
+				iconimg2="/fakta.svg"
+			></Card>
+			</div>
+			</div>
 </section>
 	</main>
 </MainLayout>
