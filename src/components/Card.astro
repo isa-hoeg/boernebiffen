@@ -15,16 +15,16 @@ import Heading from './Heading.astro';
       </div>  
 
       <div class="flex flex-row justify-between items-center">
-        <figure class="flex flex-row gap-2">
-          {(badgemusik === "true") && <div class=" bg-accent-turquoise px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Musik</span><img src="/musik.svg" alt="" class="w-5 h-5"></div>}
-          {(badgefakta !== "false") && <div class=" bg-accent-dustgreen px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Fakta</span> <img src="/fakta.svg" alt="" class="w-5 h-5"></div>}
-          {(badgedyr === "true") && <div class=" bg-accent-coral px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Dyr</span> <img src="/dyr.svg" alt="" class="w-5 h-5"></div>}
-          {(badgefilm === "true") && <div class=" bg-accent-salmon px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Film</span> <img src="/film.svg" alt="" class="w-5 h-5"></div>}
-          {(badgeserier === "true") && <div class=" bg-accent-pink px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Serier</span> <img src="/serier.svg" alt="" class="w-5 h-5"></div>}
-        </figure>
-        <div>
-          <Button variant="like" size="small" icon="/emptyheart.svg" iconHover="/filledheart.svg">Gem</Button>
-        </div>
+          <figure class="flex flex-row gap-2">
+            {(badgemusik === "true") && <div class=" bg-accent-turquoise px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Musik</span><img src="/musik.svg" alt="" class="w-5 h-5"></div>}
+            {(badgefakta !== "false") && <div class=" bg-accent-dustgreen px-3 rounded-md py-2 lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Fakta</span> <img src="/fakta.svg" alt="" class="w-5 h-5"></div>}
+            {(badgedyr === "true") && <div class=" bg-accent-coral px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Dyr</span> <img src="/dyr.svg" alt="" class="w-5 h-5"></div>}
+            {(badgefilm === "true") && <div class=" bg-accent-salmon px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Film</span> <img src="/popcorn.svg" alt="" class="w-5 h-5"></div>}
+            {(badgeserier === "true") && <div class=" bg-accent-pink px-3 py-2 rounded-md lg:rounded-lg font-display text-secondary flex flex-row gap-1 items-center text-xl"><span class="hidden sm:inline">Serier</span> <img src="/film.svg" alt="" class="w-5 h-5"></div>}
+          </figure>
+          <div>
+            <Button variant="like" size="small" icon="/emptyheart.svg" iconHover="/filledheart.svg">Gem</Button>
+          </div>
       </div>
     </div>
   </div>
