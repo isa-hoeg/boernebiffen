@@ -9,9 +9,12 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Alle film">
 	<main class="">
-		    <Headerlistsingle></Headerlistsingle>
+		<Headerlistsingle></Headerlistsingle>
+        <div class="relative">
+         <img src="/hero_forside1.svg" alt="figur" class="absolute -left-10 -top-43 scale-50 md:-left-15 md:-top-27 md:scale-60 lg:left-25 lg:-top-23 z-10 lg:scale-70">
+         </div>
 			<section class="container mx-auto">
 			<Heading htmlheading="h1" font="display" size="large" stylingclasses="text-secondary text-center">Alle film</Heading>
     <div class="w-full max-w-sm mx-auto">
