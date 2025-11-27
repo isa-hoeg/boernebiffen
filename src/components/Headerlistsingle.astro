@@ -1,5 +1,7 @@
 ---
 import Heading from "../components/Heading.astro";
+import Link from "../components/Link.astro";
+import Text from "../components/Text.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
@@ -9,112 +11,45 @@ const currentPath = pathname.slice(1);
   x-data="{ showmenu: false }"
   class=" top-0 left-0 w-full z-50 bg-[url('/header_listogsingle.svg')] bg-cover bg-[center_100%] pb-24"
 >
+<div class="hidden lg:flex flex-row justify-between px-5">
+				<div>
+					<a href=""><img src="/logo.svg" alt="Logo" class="scale-80 p-4 lg:scale-100"></a>
+				</div>	
+				<div class="flex flex-row gap-6 mx-6 my-6">
+				<Text><Link href="#" variant="primary" size="medium">Forside</Link></Text>
+      <Text><Link href="allefilm" variant="primary" size="medium">Alle film</Link></Text>
+      <Text><Link href="/test" variant="primary" size="medium" icon="/search.svg" iconHover="/searchhover.svg">Søg</Link></Text>
+      <Text><Link href="/test" variant="primary" size="medium" icon="/purpleheart.svg" iconHover="/purpleheart_hover.svg">Mine lister</Link></Text>
+      <Text><Link href="listeview" variant="primary" size="medium">Min profil</Link></Text>
+				</div>
+			</div>
 
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
 
-    <!-- Logo venstre -->
+<header x-data="{ showmenu: false }" class="relative">
+  <!-- Burger menu til mobil -->
+  <div class="lg:hidden flex items-center justify-between p-4">
     <a href="/">
-      <img src="/logo.svg" alt="Logo" class="h-12" />
+      <img src="/logo.svg" alt="Logo" class="h-12">
     </a>
 
-    <!-- Desktop menu -->
-    <nav class="hidden lg:flex gap-10 items-center">
-
-      <a href="/" class="hover:text-accent-purple transition-colors duration-300">
-        <Heading htmlheading="h3" size="xsmall" font="display" stylingclasses={currentPath === "" ? "text-accent-purple" : "text-text"}>
-          Forside
-        </Heading>
-      </a>
-
-      <a href="/alle-film" class="hover:text-accent transition-colors duration-300">
-        <Heading htmlheading="h3" size="xsmall" font="display" stylingclasses={currentPath === "alle-film" ? "text-accent" : "text-text"}>
-          Alle film
-        </Heading>
-      </a>
-
-      <a href="/" class="hover:text-accent transition-colors duration-300 flex items-center gap-1">
-        <Heading htmlheading="h3" size="xsmall" font="display" stylingclasses={currentPath === "soeg" ? "text-accent" : "text-text"}>
-          Søg
-        </Heading>
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-</svg>
-      </a>
-
-      <a href="/mine-lister" class="hover:text-accent transition-colors duration-300 flex items-center gap-1">
-        <Heading htmlheading="h3" size="xsmall" font="display" stylingclasses={currentPath === "mine-lister" ? "text-accent" : "text-text"}>
-          Mine lister
-        </Heading>
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-</svg>
-
-      </a>
-
-      <a href="/profil" class="hover:text-accent transition-colors duration-300">
-        <Heading htmlheading="h3" size="xsmall" font="display" stylingclasses={currentPath === "profil" ? "text-accent" : "text-text"}>
-          Min profil
-        </Heading>
-      </a>
-
-    </nav>
-
-    <!-- Burger menu til mobil -->
-    <button class="lg:hidden cursor-pointer" x-on:click="showmenu = !showmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    <button class="cursor-pointer" x-on:click="showmenu = !showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+           stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
     </button>
-
   </div>
 
   <!-- Mobil menu dropdown -->
-  <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" class="lg:hidden bg-bg w-full absolute top-full left-0 shadow-md backdrop-blur-sm">
+  <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" 
+       class="lg:hidden bg-bg w-full absolute top-full left-0 shadow-md backdrop-blur-sm z-10">
     <ul class="flex flex-col gap-4 p-4">
-
-      <li>
-        <a href="/" class="hover:text-accent">
-          <Heading htmlheading="h3" size="medium" font="display" stylingclasses={currentPath === "" ? "text-accent" : "text-text"}>
-            Forside
-          </Heading>
-        </a>
-      </li>
-
-      <li>
-        <a href="/alle-film" class="hover:text-accent">
-          <Heading htmlheading="h3" size="medium" font="display" stylingclasses={currentPath === "alle-film" ? "text-accent" : "text-text"}>
-            Alle film
-          </Heading>
-        </a>
-      </li>
-
-      <li class="flex items-center gap-2">
-        <a href="/soeg" class="hover:text-accent flex items-center gap-1">
-          <Heading htmlheading="h3" size="medium" font="display" stylingclasses={currentPath === "soeg" ? "text-accent" : "text-text"}>
-            Søg
-          </Heading>
-          <img src="/icons/search.svg" alt="Søg" class="w-5 h-5" />
-        </a>
-      </li>
-
-      <li class="flex items-center gap-2">
-        <a href="/mine-lister" class="hover:text-accent flex items-center gap-1">
-          <Heading htmlheading="h3" size="medium" font="display" stylingclasses={currentPath === "mine-lister" ? "text-accent" : "text-text"}>
-            Mine lister
-          </Heading>
-          <img src="/icons/heart.svg" alt="Hjerte" class="w-5 h-5" />
-        </a>
-      </li>
-
-      <li>
-        <a href="/profil" class="hover:text-accent">
-          <Heading htmlheading="h3" size="medium" font="display" stylingclasses={currentPath === "profil" ? "text-accent" : "text-text"}>
-            Min profil
-          </Heading>
-        </a>
-      </li>
-
+      <Text><Link href="/" variant="primary" size="medium">Forside</Link></Text>
+      <Text><Link href="allefilm" variant="primary" size="medium">Alle film</Link></Text>
+      <Text><Link href="/test" variant="primary" size="medium" icon="/search.svg" iconHover="/searchhover.svg">Søg</Link></Text>
+      <Text><Link href="/test" variant="primary" size="medium" icon="/purpleheart.svg" iconHover="/purpleheart_hover.svg">Mine lister</Link></Text>
+      <Text><Link href="listeview" variant="primary" size="medium">Min profil</Link></Text>
     </ul>
   </nav>
-
 </header>
