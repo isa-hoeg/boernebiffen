@@ -33,114 +33,54 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
   <div class="flex gap-10 overflow-x-auto bg-accent-yellow rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
-      <Card 
-        cardimage="/vanten.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Vanten"
-        cardcategory1="Musik"
-        cardcategory2="film"
-        cardtime="8 min"
-        variant="musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/ritaogkrokodille.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Rita og Krokodille"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="5 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/lillefinger_denskaevekasse.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den..."
-        cardcategory1="Fakta"
-        cardcategory2="Film"
-        cardtime="20 min"
-        variant="Fakta"
-        iconimg1="/fakta.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
+<Card 
+					cardimage="/vanten.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Vanten"
+					cardtime="8"
+					badgemusik="true"
+					badgefakta="true"
+				></Card>
+                <Card 
+					cardimage="/ritaogkrokodille.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Rita og Krokodillen"
+					cardtime="5"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/lillefinger_denskaevekasse.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Lillefinger - den skæve kasse"
+					cardtime="20"
+					badgeserier="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/slubre.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Slubre"
+					cardtime="4"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/soemanden.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Sømanden"
+					cardtime="6"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/dennyesommerfulg.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den nye sommerfugl"
+					cardtime="6"
+					badgesfakta="true"
+					badgefilm="true"
+				></Card>
     </div>
   </div>
 </section>
@@ -159,77 +99,53 @@ import Headerlistsingle from "../components/Headerlistsingle.astro";
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
       <Card 
-        cardimage="/vanten.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Vanten"
-        cardcategory1="Musik"
-        cardcategory2="film"
-        cardtime="8 min"
-        variant="musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/ritaogkrokodille.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Rita og Krokodille"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="5 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/lillefinger_denskaevekasse.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den.."
-        cardcategory1="Fakta"
-        cardcategory2="Film"
-        cardtime="20 min"
-        variant="Fakta"
-        iconimg1="/fakta.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
+					cardimage="/vanten.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Vanten"
+					cardtime="8"
+					badgemusik="true"
+					badgefakta="true"
+				></Card>
+                <Card 
+					cardimage="/ritaogkrokodille.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Rita og Krokodillen"
+					cardtime="5"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/lillefinger_denskaevekasse.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Lillefinger - den skæve kasse"
+					cardtime="20"
+					badgeserier="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/slubre.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Slubre"
+					cardtime="4"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/soemanden.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Sømanden"
+					cardtime="6"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/dennyesommerfulg.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den nye sommerfugl"
+					cardtime="6"
+					badgesfakta="true"
+					badgefilm="true"
+				></Card>
     </div>
   </div>
 </section>
@@ -348,78 +264,54 @@ Andre ser også
   <div class="flex gap-10 overflow-x-auto bg-accent-dustgreen rounded-xl p-6 md:p-10 intersect:animate-fade-right animate-duration-1000">
     <!-- Wrapper til kortene, så de har fast bredde -->
     <div class="flex gap-6 w-max">
-      <Card 
-        cardimage="/vanten.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Vanten"
-        cardcategory1="Musik"
-        cardcategory2="film"
-        cardtime="8 min"
-        variant="musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/ritaogkrokodille.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Rita og Krokodille"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="5 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/lillefinger_denskaevekasse.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Lillefinger - Den.."
-        cardcategory1="Fakta"
-        cardcategory2="Film"
-        cardtime="20 min"
-        variant="Fakta"
-        iconimg1="/fakta.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/slubre.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Slubre"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="4 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/soemanden.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Sømanden"
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
-      <Card 
-        cardimage="/dennyesommerfulg.webp"
-        cardimagealt="Thumbs up image"
-        cardtitle="Den nye..."
-        cardcategory1="Musik"
-        cardcategory2="Film"
-        cardtime="6 min"
-        variant="Musik"
-        iconimg1="/musik.svg"
-        iconimg2="/film.svg"
-        class="flex-shrink-0 w-64"
-      />
+                <Card 
+					cardimage="/vanten.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Vanten"
+					cardtime="8"
+					badgemusik="true"
+					badgefakta="true"
+				></Card>
+                <Card 
+					cardimage="/ritaogkrokodille.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Rita og Krokodillen"
+					cardtime="5"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/lillefinger_denskaevekasse.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Lillefinger - den skæve kasse"
+					cardtime="20"
+					badgeserier="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/slubre.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Slubre"
+					cardtime="4"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/soemanden.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Sømanden"
+					cardtime="6"
+					badgemusik="true"
+					badgefilm="true"
+				></Card>
+                <Card 
+					cardimage="/dennyesommerfulg.webp"
+					cardimagealt="Thumbs up image"
+					cardtitle="Den nye sommerfugl"
+					cardtime="6"
+					badgesfakta="true"
+					badgefilm="true"
+				></Card>
     </div>
   </div>
 </section>
