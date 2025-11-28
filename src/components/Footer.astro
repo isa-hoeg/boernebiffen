@@ -2,10 +2,13 @@
 import Heading from '../components/Heading.astro';
 import Text from '../components/Text.astro';
 import "../styles/tailwind.css";
+import Link from './Link.astro';
 ---
 <footer class="bg-[url(/footer_mobil.svg)] bg-cover md:bg-[url(/footer_desktop.svg)] grid grid-cols-1 md:grid-cols-3 pt-20 px-20 mt-10">
     <div class="flex flex-col items-center md:items-start my-15 gap-5">
-    <img src="/logo.svg" alt="logo">
+    <a href="/">
+      <img src="/logo.svg" alt="logo">
+    </a>
     <img src="/filmstriben_logo.svg" alt="Filmstriben logo">
     </div>
   <div class="flex flex-col items-center md:items-center md:my-15 gap-2">
@@ -14,6 +17,7 @@ import "../styles/tailwind.css";
     <Text stylingclasses="brødtekst underline">Cookies</Text>
     <Text stylingclasses="brødtekst underline">Privatlivspolitik</Text>
     <Text stylingclasses="brødtekst underline">Kontakt os</Text>
+    <Text><Link href="/komponentbibliotek" variant="textlink" size="medium">Komponentbibliotek</Link></Text>
   </div>
   <div class="flex flex-col items-center md:items-end my-15">
     <Text stylingclasses="brødtekst">DBC DIGITAL A/S<br>Tempovej 7-11<br>2750 Ballerup</Text>
